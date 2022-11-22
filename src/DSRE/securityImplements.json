@@ -1,0 +1,56 @@
+{
+  "DataEncryption": {
+    "title": "数据加密"
+  },
+  "DataDesensitization": {
+    "title": "数据脱敏"
+  },
+  "DataClassification": {
+    "title": "数据分类"
+  },
+  "AccessControl": {
+    "title": "访问控制"
+  },
+  "IntegrityVerification": {
+    "title": "完整性验证"
+  },
+  "LoadBalancing": {
+    "title": "负载均衡"
+  },
+  "DDoSDefense": {
+    "title": "DDOS防御"
+  },
+  "IdentityManagement": {
+    "title": "身份管理"
+  },
+  "SessionManagement": {
+    "title": "会话管理"
+  },
+  "PermissionMinimization": {
+    "title": "权限最小化"
+  },
+  "AuthorityManagement": {
+    "title": "权限管理"
+  },
+  "SecurityManagement": {
+    "title": "安全管理"
+  },
+  "SecurityAudit": {
+    "title": "安全审计"
+  },
+  "PasswordAuthentication": {
+    "title": "密码认证"
+  },
+  "SingleSingOn": {
+    "title": "单点登录"
+  },
+  "MultipleFactorAuthentication": {
+    "title": "多因素认证"
+  },
+  "CertificateAuthentication": {
+    "title": "证书认证"
+  },
+  "SecurityMonitoring": {
+    "title": "安全监控"
+  }
+}

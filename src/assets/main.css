@@ -1,0 +1,38 @@
+@import "./base.css";
+
+.relational-link {
+  margin: 5px 0;
+}
+
+.el-table .cell {
+  padding: 0 5px;
+}
+
+.el-tag {
+  padding: 3px;
+}
+
+.Compliance {
+  color: var(--el-color-danger);
+  border-color: var(--el-color-danger);
+}
+.Vulnerability {
+  color: var(--el-color-danger-dark-2);
+  border-color: var(--el-color-danger-dark-2);
+}
+.Norms {
+  color: var(--el-color-primary);
+  border-color: var(--el-color-primary);
+}
+.Functional {
+  color: var(--el-color-primary-dark-2);
+  border-color: var(--el-color-primary-dark-2);
+}
+.Weakness {
+  color: var(--el-color-warning);
+  border-color: var(--el-color-warning);
+}
+.Confrontational {
+  color: var(--el-color-warning-dark-2);
+  border-color: var(--el-color-warning-dark-2);
+}

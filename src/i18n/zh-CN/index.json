@@ -1,0 +1,12 @@
+{
+  "menu": {
+    "home": "首页",
+    "risks": "风险"
+  },
+  "seeMoreInDesktop": "在桌面系统下查看更完整版本",
+  "allCategories": "全类别",
+  "riskDetail": "风险详情",
+  "riskKey": "风险ID",
+  "riskTitle": "风险标题",
+  "riskDescription": "风险描述"
+}

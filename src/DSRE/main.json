@@ -1,0 +1,12 @@
+{
+  "name": "JDARMY DSRE",
+  "version": "0.0.1",
+  "title": "数据安全风险枚举",
+  "keyword": "Data Security Risk Enumeration",
+  "description": "DSRE（Data Security Risk Enumeration）一个开放知识框架",
+  "maintainer": "Monyer",
+  "license": "Apache 2.0",
+  "rights": "DSRE 框架由 JD.Army 创建、拥有和进行管理。JD.Army 是专注于挖掘和解决企业安全运行风险隐患的专业型红队。JD.Army 保留自行决定定期更新 DSRE 的权利。虽然 JD.Army 拥有 DSRE 的所有权利和利益，但它许可公众自由使用，遵循相关开源协议。",
+  "website": "https://DSRE.jd.army/",
+  "github": "https://github.com/JDArmy/DSRE"
+}

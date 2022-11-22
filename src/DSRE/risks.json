@@ -1,0 +1,477 @@
+{
+  "R0001": {
+    "title": "授权前采集敏感信息",
+    "description": "按照国家法律法规要求，必须在用户授权后方可采集敏感信息，所以在用户授权前采集敏感信息将面临合规风险隐患。",
+    "category": "Compliance"
+  },
+  "R0002": {
+    "title": "采集敏感信息过于频繁",
+    "description": "按照国家法律法规要求，即便经过用户授权可以采集某些敏感信息，譬如GPS位置等，但不应过于频繁。如果过于频繁将面临合规风险隐患",
+    "category": "Compliance"
+  },
+  "R0003": {
+    "title": "采集非必要的敏感信息",
+    "description": "按照国家法律法规要求，采集或采录用户敏感信息应遵循必要性原则，如果不是业务所需，且不能解释采集必要性，将面临合规风险隐患",
+    "category": "Compliance"
+  },
+  "R0004": {
+    "title": "法律法规禁止采集的信息",
+    "description": "按照国家法律法规要求，禁止采集譬如设备唯一ID等信息。如果采集了此类信息，将面临合规风险隐患。",
+    "category": "Compliance"
+  },
+  "R0005": {
+    "title": "伪造采集/采录的数据",
+    "description": "伪造终端自定采集的数据，譬如设备指纹等；或伪造用户端采录的数据，譬如用户ID，身份证号码，价格、数量等",
+    "category": "Confrontational"
+  },
+  "R0006": {
+    "title": "数据采集不完整",
+    "description": "譬如由于终端权限限制，导致只能采集部分信息，或采集失真、错误的信息等，这有可能会导致一些严重依赖终端设备信息采集的安全策略失效，譬如设备指纹判断等。",
+    "category": "Norms"
+  },
+  "R0007": {
+    "title": "脏数据",
+    "description": "采集接口采集到了垃圾、无用、超范围，或干扰数据，导致最终数据采集不完整。",
+    "category": "Functional"
+  },
+  "R0008": {
+    "title": "采集逻辑导致程序瘫痪",
+    "description": "譬如超大数、逻辑问题导致的终端崩溃或应用程序瘫痪",
+    "category": "Functional"
+  },
+  "R0009": {
+    "title": "递归采集导致的死循环",
+    "description": "由于采集代码在采集过程中没有考虑到递归问题，而导致的死循环采集。譬如目录软连接指向父目录导致采集目录结构时陷入死循环。",
+    "category": "Functional"
+  },
+  "R0010": {
+    "title": "身份冒用或伪造",
+    "description": "在数据采录时使用他人的身份证号或个人信息实现仿冒，或在数据提交时使用他人的访问ID等",
+    "category": "Confrontational"
+  },
+  "R0011": {
+    "title": "无认证或认证失效",
+    "description": "未认证信息采集者的身份，或认证方式失效。譬如在信息采集的过程中，过分依赖明文的用户id，导致覆盖他人信息等。",
+    "category": "Vulnerability"
+  },
+  "R0012": {
+    "title": "终端索取/授予权限过大",
+    "description": "按照国家法律法规要求，索取终端权限要符合一定的必要性原则，不能超限度索取终端权限，譬如无理由索取短信读取、通讯录读取等权限，禁止不授予权限就不让执行APP等情况。",
+    "category": "Compliance"
+  },
+  "R0013": {
+    "title": "采集数据关联性失效",
+    "description": "采集数据未设置有效归属和关联关系，无法实现数据溯源。譬如在通讯录的采集过程中，只记录了互相间的对应关系，没有记录单条数据来源，导致一旦采集了伪造数据，对现有数据造成污染，且不能够有效溯源出污染源。",
+    "category": "Functional"
+  },
+  "R0014": {
+    "title": "敏感信息未加密传输",
+    "description": "按照国家法律法规要求，对终端采集采录的用户敏感个人信息要采取加密的方式进行传输，如果未加密将存在合规风险。",
+    "category": "Compliance"
+  },
+  "R0015": {
+    "title": "数据传输通道未加密",
+    "description": "采取了明文的方式传输数据，譬如HTTP、FTP、POP、SMTP等。应该采取譬如HTTPS、SFTP、POPS、SMTPS等高强度加密协议来传输数据。",
+    "category": "Norms"
+  },
+  "R0016": {
+    "title": "较弱的加密协议/算法",
+    "description": "譬如HTTPS协议中使用了小于512位的RSA密钥对，数据签名中使用了md5等较弱的可以碰撞的加密算法等。",
+    "category": "Norms"
+  },
+  "R0017": {
+    "title": "截获传输的数据",
+    "description": "通过中间人劫持等技术劫持数据，并还原数据的内容或数据的行为、特征。",
+    "category": "Confrontational"
+  },
+  "R0018": {
+    "title": "数据加密算法硬编码",
+    "description": "将算法密钥以变量形式存放在代码中，不能通过配置等方式进行动态修改",
+    "category": "Norms"
+  },
+  "R0019": {
+    "title": "数据传输包重放",
+    "description": "不应该被重复请求或重复操作的数据被抓包进行数据包重放，譬如优惠劵重复使用等",
+    "category": "Confrontational"
+  },
+  "R0020": {
+    "title": "缺乏完整性校验",
+    "description": "过于相信终端传输的数据，未在服务端做完整性校验，譬如成交价格等。",
+    "category": "Weakness"
+  },
+  "R0021": {
+    "title": "终端签名对抗",
+    "description": "终端校验算法太弱、可猜测，或通过终端逆向攻破算法等",
+    "category": "Confrontational"
+  },
+  "R0022": {
+    "title": "篡改传输的数据",
+    "description": "通过中间人劫持等技术劫持数据，并篡改或伪造数据给数据接收方。",
+    "category": "Confrontational"
+  },
+  "R0023": {
+    "title": "异常请求致系统崩溃",
+    "description": "向服务器传输了不能被正常处理的数据（譬如异常字符等），或向服务器请求了超出计算的资源（譬如超大分页等）",
+    "category": "Vulnerability"
+  },
+  "R0024": {
+    "title": "批量请求拒绝服务",
+    "description": "通过分布式拒绝服务攻击或CC攻击至服务器停止响应或拒绝服务",
+    "category": "Confrontational"
+  },
+  "R0025": {
+    "title": "无认证数据请求",
+    "description": "在非登录的情况下成功请求了需要登录下才能访问的数据",
+    "category": "Vulnerability"
+  },
+  "R0026": {
+    "title": "越权数据请求",
+    "description": "在A用户登录的情况下成功请求了应该在B用户登录下才能访问的数据",
+    "category": "Vulnerability"
+  },
+  "R0027": {
+    "title": "数据来源无审计",
+    "description": "未对数据来源进行存储和审计",
+    "category": "Norms"
+  },
+  "R0028": {
+    "title": "敏感信息未加密存储",
+    "description": "按照国家法律法规要求，涉及用户个人隐私数据必须在服务端进行加密存储，如果未加密将有合规风险。",
+    "category": "Compliance"
+  },
+  "R0029": {
+    "title": "脆弱的摘要/加密算法",
+    "description": "在敏感数据存储时采用了脆弱的摘要或加密算法，譬如使用MD5、SHA1等脆弱的摘要算法来存储密码，或者对加密数据使用了脆弱的加密秘钥等。",
+    "category": "Norms"
+  },
+  "R0030": {
+    "title": "敏感数据任意访问",
+    "description": "数据库及数据缓存服务没有对敏感数据的访问进行限制，导致可以被任意工程师或服务端应用访问，可以任意导出或向其他应用外传。",
+    "category": "Weakness"
+  },
+  "R0031": {
+    "title": "数据库连接配置硬编码",
+    "description": "开发工程师将数据库连接信息硬编码到代码中，导致无法通过修改配置等方式定期或动态修改数据库连接密码",
+    "category": "Norms"
+  },
+  "R0032": {
+    "title": "数据库及中间件漏洞",
+    "description": "数据库及中间件版本过旧，或配置错误，导致存在影响数据机密性漏洞",
+    "category": "Weakness"
+  },
+  "R0033": {
+    "title": "备份数据泄露",
+    "description": "由于对备份数据访问权限控制不严格，或存在可猜测的备份文件下载路径，或存储备份数据相关漏洞（譬如可自定义路径等）等导致通过备份数据的方式引起的数据泄露",
+    "category": "Vulnerability"
+  },
+  "R0034": {
+    "title": "没有容灾备份",
+    "description": "数据存储没有容灾备份，一旦损坏无法恢复",
+    "category": "Norms"
+  },
+  "R0035": {
+    "title": "无数据库危险操作防护",
+    "description": "线上环境没有对数据库危险操作，譬如：批量数据的修改、删除，数据库删表、删库等危险操作进行防护。",
+    "category": "Weakness"
+  },
+  "R0036": {
+    "title": "数据库用户分配权限过大",
+    "description": "给数据库用户分配了业务不需要的高危权限，譬如delete、drop、truncate等，或 分配了不该访问的表权限等。",
+    "category": "Weakness"
+  },
+  "R0037": {
+    "title": "竞争条件",
+    "description": "由于两个或者多个进程竞争使用不能被同时访问的资源，使得这些进程有可能因为时间上推进的先后原因而出现问题，这叫做竞争条件（Race Condition）",
+    "category": "Functional"
+  },
+  "R0038": {
+    "title": "数据加密勒索",
+    "description": "通过SQL注入、获得数据库访问权限等方式对数据库数据进行加密勒索，且不能保证第一时间察觉及恢复。",
+    "category": "Confrontational"
+  },
+  "R0039": {
+    "title": "数据竞争",
+    "description": "出现在一般数据的访问，一个读进程和写进程，如果没有进行同步，那么就会出现数据访问错误。",
+    "category": "Functional"
+  },
+  "R0040": {
+    "title": "容灾不可用",
+    "description": "在数据系统出现问题时，不能保证容灾系统可在第一时间被使用",
+    "category": "Functional"
+  },
+  "R0041": {
+    "title": "数据服务无认证访问",
+    "description": "如Redis、ES、Mysql未进行访问用户身份认证或使用了空口令，导致可以无认证访问数据。",
+    "category": "Vulnerability"
+  },
+  "R0042": {
+    "title": "数据库弱口令",
+    "description": "数据库访问用户设置了弱口令",
+    "category": "Vulnerability"
+  },
+  "R0043": {
+    "title": "数据库访问无IP限制",
+    "description": "未对数据库的访问者进行IP来源限制",
+    "category": "Weakness"
+  },
+  "R0044": {
+    "title": "数据库文件无认证访问",
+    "description": "大多数数据库以某种格式落盘数据文件，由于未对登录数据库服务器的访问者进行限制，导致任意用户可以访问并导出数据库文件",
+    "category": "Weakness"
+  },
+  "R0045": {
+    "title": "数据连接配置泄露",
+    "description": "大体分为两种情形：一种是程序员将数据连接配置硬编码到了代码中且代码可被他人访问，或程序员将程序代码连同数据库连接配置文件上传到了互联网公开位置（譬如Github等）；另一种是业务将数据连接配置返回到了页面前端，或在系统出错时向前端打印了包含数据连接配置的堆栈信息。",
+    "category": "Vulnerability"
+  },
+  "R0046": {
+    "title": "特权用户缺乏有效管理",
+    "description": "特权用户缺乏有效管理可被组织任意成员访问或使用",
+    "category": "Norms"
+  },
+  "R0047": {
+    "title": "数据访问权限过大",
+    "description": "可以访问不该访问的数据表或数据库",
+    "category": "Norms"
+  },
+  "R0048": {
+    "title": "系统缺乏有效权限控制",
+    "description": "数据服务所在系统缺乏有效权限控制，可以对数据文件进行操作。",
+    "category": "Norms"
+  },
+  "R0049": {
+    "title": "数据操作无审计",
+    "description": "数据的增删查改等操作无审计记录",
+    "category": "Norms"
+  },
+  "R0050": {
+    "title": "审计日志存留周期不足",
+    "description": "按照国家法律法规要求，审计日志要保证一定的留存周期。如果留存周期不足将面临合规风险隐患",
+    "category": "Compliance"
+  },
+  "R0051": {
+    "title": "审计日志的CIA问题",
+    "description": "机密性（不能包含密码登）、完整性（是否全面可溯源）、可用性问题",
+    "category": "Norms"
+  },
+  "R0052": {
+    "title": "数据渗漏",
+    "description": "模拟内鬼（开发、运维、大数据、业务）人员开展数据渗漏尝试",
+    "category": "Confrontational"
+  },
+  "R0053": {
+    "title": "敏感数据明文参与计算",
+    "description": "敏感数据明文参与计算会存在数据泄露隐患，尤其是在多方计算的情况下。应将数据脱敏进行计算或使用隐私计算方式。",
+    "category": "Norms"
+  },
+  "R0054": {
+    "title": "计算环境不可信/不安全",
+    "description": "计算环境不可信/不安全，存在数据泄露隐患或漏洞",
+    "category": "Weakness"
+  },
+  "R0055": {
+    "title": "敏感信息未脱敏展示",
+    "description": "按照国家法律法规要求，敏感个人信息要经过脱敏后在前端展示，为脱敏展示有可能存在合规隐患",
+    "category": "Compliance"
+  },
+  "R0056": {
+    "title": "敏感数据可枚举",
+    "description": "可以通过枚举ID的方式获取敏感数据",
+    "category": "Confrontational"
+  },
+  "R0057": {
+    "title": "数据展示端逻辑漏洞",
+    "description": "数据展示端存在逻辑漏洞，导致可以获取敏感数据",
+    "category": "Vulnerability"
+  },
+  "R0058": {
+    "title": "数据展示端常规漏洞",
+    "description": "数据展示端存在譬如SQL注入、XXE、任意文件读取、本地文件包含、远程命令执行等常规漏洞，导致可以获取敏感数据",
+    "category": "Vulnerability"
+  },
+  "R0059": {
+    "title": "后台账户权限过大",
+    "description": "后台账号权限过大导致可以查看敏感数据",
+    "category": "Norms"
+  },
+  "R0060": {
+    "title": "脆弱的摘要/加密算法",
+    "description": "在敏感数据处理时采用了脆弱的摘要或加密算法，譬如使用MD5、SHA1等脆弱的摘要算法来进行完整性校验。",
+    "category": "Norms"
+  },
+  "R0061": {
+    "title": "数据交换未经用户授权",
+    "description": "按照国家法律法规要求，向第三方交换用户数据必须要经过用户授权方可。否则将面临合规风险隐患",
+    "category": "Compliance"
+  },
+  "R0062": {
+    "title": "向境外发送个人数据",
+    "description": "按照国家法律法规要求，不能向境外服务器发送个人数据。否则将面临合规风险隐患",
+    "category": "Compliance"
+  },
+  "R0063": {
+    "title": "算法导致的拒绝服务",
+    "description": "由于算法漏洞，如：递归、资源消耗、错误数据类型等导致的拒绝服务问题",
+    "category": "Functional"
+  },
+  "R0064": {
+    "title": "",
+    "description": "",
+    "category": ""
+  },
+  "R0065": {
+    "title": "",
+    "description": "",
+    "category": ""
+  },
+  "R0066": {
+    "title": "中间件漏洞拒绝服务",
+    "description": "由于数据服务或中间件存在漏洞被利用，导致的拒绝服务",
+    "category": "Vulnerability"
+  },
+  "R0067": {
+    "title": "前端敏感数据无认证访问",
+    "description": "可以在不登录任何用户的前提下通过资源ID访问敏感数据或页面。",
+    "category": "Vulnerability"
+  },
+  "R0068": {
+    "title": "水平越权",
+    "description": "处于同一级别的用户可以互相访问或操纵其他用户资源",
+    "category": "Vulnerability"
+  },
+  "R0069": {
+    "title": "用户身份认证漏洞",
+    "description": "用户身份认证过程存在漏洞，导致可以绕过用户身份认证登录任意或特定用户",
+    "category": "Vulnerability"
+  },
+  "R0070": {
+    "title": "MFA失效或无MFA认证",
+    "description": "MFA失效或无MFA认证，导致可以绕过MFA认证体系",
+    "category": "Vulnerability"
+  },
+  "R0071": {
+    "title": "",
+    "description": "",
+    "category": ""
+  },
+  "R0072": {
+    "title": "",
+    "description": "",
+    "category": ""
+  },
+  "R0073": {
+    "title": "垂直越权",
+    "description": "需要更高级别或权限才能访问的数据被较低级别或权限的用户访问或操作。",
+    "category": "Vulnerability"
+  },
+  "R0074": {
+    "title": "数据计算过程无审计",
+    "description": "在数据的查询、导出、计算、留存等环节无日志审计",
+    "category": "Norms"
+  },
+  "R0075": {
+    "title": "数据访问无审计",
+    "description": "按照国家法律法规要求，数据的请求操作必须进行日志审计。若无日志审计，将存在合规风险",
+    "category": "Compliance"
+  },
+  "R0076": {
+    "title": "敏感信息不负责任交换",
+    "description": "敏感数据交换未脱敏，未按照规范使用数据等",
+    "category": "Norms"
+  },
+  "R0077": {
+    "title": "敏感信息脱敏算法脆弱",
+    "description": "脱敏后的数据可以被一定程度还原",
+    "category": "Confrontational"
+  },
+  "R0078": {
+    "title": "敏感数据流动无跟踪机制",
+    "description": "无法计算数据血缘等",
+    "category": "Norms"
+  },
+  "R0079": {
+    "title": "数据交换系统漏洞",
+    "description": "数据交换系统存在漏洞，导致敏感数据泄露风险",
+    "category": "Vulnerability"
+  },
+  "R0080": {
+    "title": "数据格式差异完整性问题",
+    "description": "在数据交换过程中，对同一数据的格式定义不一致导致数据被损坏或缺失，譬如在数据提供者定义数据为浮点数，在数据接收者定义数据为整数导致数据不准确等",
+    "category": "Functional"
+  },
+  "R0081": {
+    "title": "非系统化的数据交换流程",
+    "description": "譬如使用excel等方式交换数据，因数据自动解析等问题导致数据不完整等问题",
+    "category": "Functional"
+  },
+  "R0082": {
+    "title": "",
+    "description": "",
+    "category": ""
+  },
+  "R0083": {
+    "title": "数据格式差异可用性问题",
+    "description": "在数据交换过程中，对同一数据的格式定义不一致导致系统出错不可用。譬如在数据提供者定义数据为字符串，在数据接收者定义数据为整数导致数据格式处理出错等。",
+    "category": "Functional"
+  },
+  "R0084": {
+    "title": "",
+    "description": "",
+    "category": ""
+  },
+  "R0085": {
+    "title": "脆弱的数据交换认证机制",
+    "description": "未对数据请求者进行身份认证，或采取了较弱的可破解、可绕过的身份验证机制。",
+    "category": "Vulnerability"
+  },
+  "R0086": {
+    "title": "未认证数据交换主体",
+    "description": "未认证数据交换主体，譬如IP等。存在身份冒用风险",
+    "category": "Weakness"
+  },
+  "R0087": {
+    "title": "越权获取超限的交换数据",
+    "description": "有些数据交换是和第三方开展的。如果对数据交换授权不严格，则有可能导致获取到非授权数据范围、非授权字段，以及大于预期数据量级的数据等。",
+    "category": "Weakness"
+  },
+  "R0088": {
+    "title": "数据交换授予权限过大",
+    "description": "譬如授予了增、删、改类权限，或允许交换范围外的数据等",
+    "category": "Weakness"
+  },
+  "R0089": {
+    "title": "数据交换无审计",
+    "description": "无数据交换审计日志，包括数据请求者（或接受者）的主体，请求内容等。",
+    "category": "Norms"
+  },
+  "R0090": {
+    "title": "数据假销毁",
+    "description": "按照国家法律法规要求，要向用户提供账号及数据销毁的功能。若在用户进行账号及数据销毁时，只是设置了标识位，没有进行真正意义上的销毁。一旦通过某种途径前端感知，则有可能被投诉造成合规风险。",
+    "category": "Compliance"
+  },
+  "R0091": {
+    "title": "数据部分销毁",
+    "description": "按照国家法律法规要求，要向用户提供账号及数据销毁的功能。若在用户进行账号及数据销毁时，未对所有相关数据进行完全销毁，且可以通过某种途径前端感知，则有可能被投诉造成合规风险。",
+    "category": "Compliance"
+  },
+  "R0092": {
+    "title": "销毁了不该销毁的数据",
+    "description": "譬如数据库级联删除，误操作：“rm -rf /”等",
+    "category": "Functional"
+  },
+  "R0093": {
+    "title": "未认证数据销毁主体",
+    "description": "没有验证数据销毁请求者的身份",
+    "category": "Vulnerability"
+  },
+  "R0094": {
+    "title": "越权数据销毁",
+    "description": "存储水平越权或垂直越权数据销毁风险隐患",
+    "category": "Vulnerability"
+  },
+  "R0095": {
+    "title": "数据销毁无审计",
+    "description": "没有对数据销毁过程进行日志审计",
+    "category": "Norms"
+  }
+}

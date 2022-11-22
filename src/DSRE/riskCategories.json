@@ -1,0 +1,26 @@
+{
+  "Compliance": {
+    "title": "合规",
+    "description": "指因不符合由国家监管单位、职能部门及组织下发的相关数据安全法律法规要求导致的风险"
+  },
+  "Functional": {
+    "title": "功能",
+    "description": "指由数据系统实现过程中的功能BUG导致的一类风险"
+  },
+  "Vulnerability": {
+    "title": "漏洞",
+    "description": "指可能被攻击者发现并利用造成一定数据安全影响的风险"
+  },
+  "Confrontational": {
+    "title": "对抗",
+    "description": "指存在一定的对抗阶段，需要持续不断进行能力提升的一类风险"
+  },
+  "Weakness": {
+    "title": "隐患",
+    "description": "指不会直接被攻击者利用，但与某些漏洞相结合或在某些特定场景下有可能出问题的风险"
+  },
+  "Norms": {
+    "title": "规范",
+    "description": "指因不符合除“合规”外的应该具备及被遵守的相关数据安全规范导致的风险"
+  }
+}
