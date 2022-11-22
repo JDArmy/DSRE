@@ -222,11 +222,10 @@ let riskDetailClose = () => {
   display: block;
   height: 100%;
   width: 100%;
-  font-size: 90%;
 }
 
 .category {
-  transform: scale(0.7);
+  transform: scale(0.75);
   margin-left: -5px;
 }
 </style>
