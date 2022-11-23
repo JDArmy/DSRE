@@ -1,5 +1,11 @@
 # DSRE
 
+数据安全风险枚举 Data Security Risk Enumeration
+
+在线查看：https://dsre.jd.army/
+
+
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup

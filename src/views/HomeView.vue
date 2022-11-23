@@ -7,6 +7,7 @@ import { useRouter, useRoute } from "vue-router";
 
 const secAttrs = ["header"].concat(Object.keys(DSRE.secAttrs));
 const lifeCycle = Object.keys(DSRE.lifeCycle);
+const getWindowHeight = () => window.innerHeight;
 
 //分场景查看风险
 let ctgRiskKeys = ref(Object.keys(DSRE.risks));
@@ -110,6 +111,16 @@ let riskDetailClose = () => {
           {{ $t(`DSRE.secAttrs.${saKey}.title`) }}
           <br />
           {{ saKey }}
+          <br />
+          <div>
+            <el-tag
+              type="danger"
+              :title="$t(`DSRE.secAttrs.${saKey}.threaten.definition`)"
+              >对应威胁：{{
+                $t(`DSRE.secAttrs.${saKey}.threaten.title`)
+              }}</el-tag
+            >
+          </div>
         </div></template
       >
       <template #default="scope">
