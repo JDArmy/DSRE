@@ -3,6 +3,7 @@ import DSRE from "@/DSRE";
 import { ref, watch } from "vue";
 
 import RiskDetail from "@/components/RiskDetail.vue";
+import ImplementDetail from "@/components/ImplementDetail.vue";
 import { useRouter, useRoute } from "vue-router";
 
 const secAttrs = ["header"].concat(Object.keys(DSRE.secAttrs));
@@ -66,6 +67,19 @@ let riskDetailClose = () => {
   });
 };
 //end.
+
+/////////////////////////////////////////////////////////////////////
+//start: 查看Implement Information
+
+let implDrawer = ref(false);
+let implKey = ref("");
+let showImplDrawer = (implKey1: string) => {
+  implDrawer.value = true;
+  implKey.value = implKey1;
+};
+let implDetailClose = () => {
+  drawer.value = false;
+};
 </script>
 
 <template lang="">
@@ -97,7 +111,13 @@ let riskDetailClose = () => {
     </el-col>
   </el-row>
 
-  <el-table :data="lifeCycle" border stripe style="width: 100%">
+  <el-table
+    :height="getWindowHeight() - 50"
+    :data="lifeCycle"
+    border
+    stripe
+    style="width: 100%"
+  >
     <el-table-column
       v-for="saKey in secAttrs"
       :width="saKey == 'header' ? 100 : ''"
@@ -108,10 +128,9 @@ let riskDetailClose = () => {
           安全属性→<br />生命周期↓
         </div>
         <div v-else class="header-sec-attrs">
-          {{ $t(`DSRE.secAttrs.${saKey}.title`) }}
-          <br />
-          {{ saKey }}
-          <br />
+          {{ $t(`DSRE.secAttrs.${saKey}.title`) }}&nbsp;(&nbsp;{{
+            saKey
+          }}&nbsp;)
           <div>
             <el-tag
               type="danger"
@@ -120,6 +139,18 @@ let riskDetailClose = () => {
                 $t(`DSRE.secAttrs.${saKey}.threaten.title`)
               }}</el-tag
             >
+          </div>
+          <div>
+            <el-button
+              type="default"
+              size="small"
+              effect="dark"
+              v-for="implKey in DSRE.secAttrs[saKey].implements"
+              :key="implKey"
+              @click="showImplDrawer(implKey)"
+            >
+              {{ $t(`DSRE.secImpls.${implKey}.title`) }}
+            </el-button>
           </div>
         </div></template
       >
@@ -164,7 +195,17 @@ let riskDetailClose = () => {
     :drawer="drawer"
     :rKey="riskKey"
   />
+  <ImplementDetail
+    v-on:drawer-close="implDetailClose"
+    :implDrawer="implDrawer"
+    :implKey="implKey"
+  />
 </template>
+<style>
+.el-tag {
+  margin: 2px;
+}
+</style>
 <style scoped>
 .header-sec-attrs {
   text-align: center;

@@ -1,56 +1,202 @@
 {
   "DataEncryption": {
-    "title": "数据加密"
+    "title": "数据加密",
+    "description": "数据加密，是一门历史悠久的技术，指通过加密算法和加密密钥将明文转变为密文，而解密则是通过解密算法和解密密钥将密文恢复为明文。它的核心是密码学。数据加密仍是计算机系统对信息进行保护的一种最可靠的办法。它利用密码技术对信息进行加密，实现信息隐蔽，从而起到保护信息的安全的作用。",
+    "references": [
+      {
+        "title": "百度百科-数据加密",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%8A%A0%E5%AF%86/11048982?fr=aladdin"
+      }
+    ]
   },
   "DataDesensitization": {
-    "title": "数据脱敏"
+    "title": "数据脱敏",
+    "description": "数据脱敏是指对某些敏感信息通过脱敏规则进行数据的变形，实现敏感隐私数据的可靠保护。在涉及客户安全数据或者一些商业性敏感数据的情况下，在不违反系统规则条件下，对真实数据进行改造并提供测试使用，如身份证号、手机号、卡号、客户号等个人信息都需要进行数据脱敏。",
+    "references": [
+      {
+        "title": "百度百科-数据脱敏",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E8%84%B1%E6%95%8F?fromModule=lemma_search-box"
+      }
+    ]
   },
   "DataClassification": {
-    "title": "数据分类"
+    "title": "分类分级",
+    "description": "数据分类是指根据组织数据的属性或特征，将其按照一定的原则和方法进行区分和归类，并建立起一定的分类体系和排列顺序，以便更好地管理和使用组织数据的过程。数据分级是指按照公共数据遭到破坏(包括攻击、泄露、篡改、非法使用等)后对受侵害各体合法权益(国家安全、社会秩序、公共利益以及公民、法人和其他组织)的危害程度，对公共数据进行定级，为数据全生命周期管理进行的安全策略制定。",
+    "references": [
+      {
+        "title": "一文读懂数据安全分类分级",
+        "link": "https://blog.csdn.net/Dtwave_/article/details/124943506"
+      }
+    ]
+  },
+  "DataPartition": {
+    "title": "分区分域",
+    "description": "区分“资源管理范围”，管理员只能管理属于自己域内的资源。针对某些大企业或者单位，存在按部门或分支机构进行划分的二级维护管理员。一级管理员根据组织机构划分和管理区域，将计算机划分所属区域。二级管理员只能查看和管理自己区域的计算机。",
+    "references": [
+      {
+        "title": "分区分域中的分域概念",
+        "link": "https://forum.huawei.com/enterprise/zh/thread/580935957857845248"
+      }
+    ]
   },
   "AccessControl": {
-    "title": "访问控制"
+    "title": "访问控制",
+    "description": "访问控制是几乎所有系统（包括计算机系统和非计算机系统）都需要用到的一种技术。访问控制是按用户身份及其所归属的某项定义组来限制用户对某些信息项的访问，或限制对某些控制功能的使用的一种技术",
+    "references": [
+      {
+        "title": "百度百科-访问控制",
+        "link": "https://baike.baidu.com/item/%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6/8545517?fr=aladdin"
+      }
+    ]
   },
   "IntegrityVerification": {
-    "title": "完整性验证"
+    "title": "完整性验证",
+    "description": "数据完整性指数据不会被非授权更改或破坏，如篡改、删除、插入等。利用密码技术在密钥的控制下生成被保护数据的认证符，密钥私密性保证只有授权用户才能产生正确的认证符，密码技术的安全特性保证只要对数据做了非授权修改，则通过认证符一定可以检测，即认证符对于数据的变化非常敏感",
+    "references": [
+      {
+        "title": "数据完整性验证",
+        "link": "https://blog.csdn.net/m0_56534254/article/details/127102613"
+      }
+    ]
   },
   "LoadBalancing": {
-    "title": "负载均衡"
+    "title": "负载均衡",
+    "description": "负载均衡，英文名称为Load Balance，其含义就是指将负载（工作任务）进行平衡、分摊到多个操作单元上进行运行，例如FTP服务器、Web服务器、企业核心应用服务器和其它主要任务服务器等，从而协同完成工作任务。负载均衡构建在原有网络结构之上，它提供了一种透明且廉价有效的方法扩展服务器和网络设备的带宽、加强网络数据处理能力、增加吞吐量、提高网络的可用性和灵活性。",
+    "references": [
+      {
+        "title": "百度百科-负载均衡",
+        "link": "https://baike.baidu.com/item/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1?fromModule=lemma_search-box"
+      }
+    ]
   },
   "DDoSDefense": {
-    "title": "DDOS防御"
+    "title": "DDOS防御",
+    "description": "DDOS分布式拒绝服务攻击是指处于不同位置的多个攻击者同时向一个或数个目标发动攻击，或者一个攻击者控制了位于不同位置的多台机器并利用这些机器对受害者同时实施攻击。由于攻击的发出点是分布在不同地方的，这类攻击称为分布式拒绝服务攻击，其中的攻击者可以有多个。DDOS防御主要为了降低DDOS攻击造成的损害。",
+    "references": [
+      {
+        "title": "百度百科-DDOS防御",
+        "link": "https://baike.baidu.com/item/DDOS%E9%98%B2%E5%BE%A1?fromModule=lemma_search-box"
+      }
+    ]
   },
   "IdentityManagement": {
-    "title": "身份管理"
+    "title": "身份管理",
+    "description": "身份管理（IDM-IdentityManagement）是账号管理，认证管理，授权管理，审计管理解决方案的统称，是一套完整的账号集中管理，管控的解决方案，业界也称之为4A（账号-Account，认证-Authentication，授权-Authorization，审计-Audit）。",
+    "references": [
+      {
+        "title": "百度百科-身份管理",
+        "link": "https://baike.baidu.com/item/%E8%BA%AB%E4%BB%BD%E7%AE%A1%E7%90%86/18758353?fr=aladdin"
+      }
+    ]
   },
   "SessionManagement": {
-    "title": "会话管理"
+    "title": "会话管理",
+    "description": "在人机交互，会话管理是保持用户的整个会话活动的互动与计算机系统跟踪过程。会话管理分类：桌面会话管理、浏览器会话管理、Web服务器的会话管理（通常指的SESSION以及COOKIE）。",
+    "references": [
+      {
+        "title": "百度百科-会话管理",
+        "link": "https://baike.baidu.com/item/%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86?fromModule=lemma_search-box"
+      }
+    ]
   },
   "PermissionMinimization": {
-    "title": "权限最小化"
+    "title": "权限最小化",
+    "description": "在计算机科学以及其它领域中，最小权限原则是要求计算环境中的特定抽象层的每个模块如进程、用户或者计算机程序只能访问当下所必需的信息或者资源。它赋予每一个合法动作最小的权限，就是为了保护数据以及功能避免受到错误或者恶意行为的破坏。最小权限原则也称为最少权限原则。",
+    "references": [
+      {
+        "title": "百度百科-最小权限原则",
+        "link": "https://baike.baidu.com/item/%E6%9C%80%E5%B0%8F%E6%9D%83%E9%99%90%E5%8E%9F%E5%88%99/10956259?fr=aladdin"
+      }
+    ]
   },
   "AuthorityManagement": {
-    "title": "权限管理"
+    "title": "权限管理",
+    "description": "权限管理，一般指根据系统设置的安全规则或者安全策略，用户可以访问而且只能访问自己被授权的资源，不多不少。权限管理几乎出现在任何系统里面，只要有用户和密码的系统。 很多人常将“用户身份认证”、“密码加密”、“系统管理”等概念与权限管理概念混淆。",
+    "references": [
+      {
+        "title": "百度百科-权限管理",
+        "link": "https://baike.baidu.com/item/%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86?fromModule=lemma_search-box"
+      }
+    ]
   },
   "SecurityManagement": {
-    "title": "安全管理"
+    "title": "安全管理",
+    "description": "安全管理是企业生产管理的重要组成部分，是一门综合性的系统科学。安全管理的对象是生产中一切人、物、环境的状态管理与控制，安全管理是一种动态管理。安全管理，主要是组织实施企业安全管理规划、指导、检查和决策，同时，又是保证生产处于最佳安全状态的根本环节。",
+    "references": [
+      {
+        "title": "百度百科-安全管理",
+        "link": "https://baike.baidu.com/item/%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86/5390196?fromModule=lemma_search-box"
+      }
+    ]
   },
   "SecurityAudit": {
-    "title": "安全审计"
+    "title": "安全审计",
+    "description": "信息安全审计主要是指对系统中与安全有关的活动的相关信息进行识别、记录、存储和分析。信息安全审计的记录用于检查网络上发生了哪些与安全有关的活动，谁（哪个用户）对这个活动负责。",
+    "references": [
+      {
+        "title": "百度百科-安全审计",
+        "link": "https://baike.baidu.com/item/%E5%AE%89%E5%85%A8%E5%AE%A1%E8%AE%A1?fromModule=lemma_search-box"
+      }
+    ]
   },
   "PasswordAuthentication": {
-    "title": "密码认证"
+    "title": "密码认证",
+    "description": "对消息传送过程中某些参数或内容的完整性进行检验的密码。认证密码通常检验参数或内容是否满足某种预先确定的关系，以防止主动攻击。验证消息来源的合法性，即验证发送者是真实的，而不是冒充的，称为身份认证；验证消息的真实性，即验证消息来自可信发送方且在传输或存储过程中未被篡改、重放或延迟等，称为消息认证。",
+    "references": [
+      {
+        "title": "百度百科-密码认证",
+        "link": "https://baike.baidu.com/item/%E8%AE%A4%E8%AF%81%E5%AF%86%E7%A0%81/50914902?fromModule=search-result_lemma"
+      }
+    ]
   },
   "SingleSingOn": {
-    "title": "单点登录"
+    "title": "单点登录",
+    "description": "单点登录（Single Sign On），简称为 SSO，是比较流行的企业业务整合的解决方案之一。SSO的定义是在多个应用系统中，用户只需要登录一次就可以访问所有相互信任的应用系统。",
+    "references": [
+      {
+        "title": "百度百科-单点登录",
+        "link": "https://baike.baidu.com/item/%E5%8D%95%E7%82%B9%E7%99%BB%E5%BD%95?fromModule=lemma_search-box"
+      }
+    ]
   },
   "MultipleFactorAuthentication": {
-    "title": "多因素认证"
+    "title": "多因素认证",
+    "description": "多重要素验证（英语：Multi-factor authentication，缩写为 MFA），又译多因子认证、多因素验证、多因素认证，是一种计算机访问控制的方法，用户要通过两种以上的认证机制之后，才能得到授权，使用计算机资源。例如，用户要输入PIN码，插入银行卡，最后再经指纹比对，通过这三种认证方式，才能获得授权。这种认证方式可以提高安全性。",
+    "references": [
+      {
+        "title": "百度百科-多因素认证",
+        "link": "https://baike.baidu.com/item/%E5%A4%9A%E5%9B%A0%E7%B4%A0%E9%AA%8C%E8%AF%81/22657576?fromModule=search-result_lemma"
+      }
+    ]
   },
   "CertificateAuthentication": {
-    "title": "证书认证"
+    "title": "证书认证",
+    "description": "数字证书是指在互联网通讯中标志通讯各方身份信息的一个数字认证，人们可以在网上用它来识别对方的身份。因此数字证书又称为数字标识。数字证书对网络用户在计算机网络交流中的信息和数据等以加密或解密的形式保证了信息和数据的完整性和安全性。",
+    "references": [
+      {
+        "title": "百度百科-数字证书",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6?fromtitle=%E7%94%B5%E5%AD%90%E8%AF%81%E4%B9%A6&fromid=6836643&fromModule=lemma_search-box"
+      }
+    ]
   },
   "SecurityMonitoring": {
-    "title": "安全监控"
+    "title": "安全监控",
+    "description": "安全监控通过实时监控网络或主机活动，监视分析用户和系统的行为，审计系统配置和漏洞，评估敏感系统和数据的完整性，识别攻击行为，对异常行为进行统计和跟踪，识别违反安全法规的行为，使用诱骗服务器记录黑客行为等功能，使管理员有效地监视、控制和评估网络或主机系统。",
+    "references": [
+      {
+        "title": "百度百科-安全监控",
+        "link": "https://baike.baidu.com/item/%E5%AE%89%E5%85%A8%E7%9B%91%E6%8E%A7?fromModule=lemma_search-box"
+      }
+    ]
+  },
+  "DisasterRecoveryBackup": {
+    "title": "容灾备份",
+    "description": "容灾备份系统是指在相隔较远的异地，建立两套或多套功能相同的IT系统，互相之间可以进行健康状态监视和功能切换，当一处系统因意外(如火灾、地震等)停止工作时，整个应用系统可以切换到另一处，使得该系统功能可以继续正常工作。容灾技术是系统的高可用性技术的一个组成部分，容灾系统更加强调处理外界环境对系统的影响，特别是灾难性事件对整个IT节点的影响，提供节点级别的系统恢复功能。",
+    "references": [
+      {
+        "title": "百度百科-容灾备份",
+        "link": "https://baike.baidu.com/item/%E5%AE%B9%E7%81%BE%E5%A4%87%E4%BB%BD?fromModule=lemma_search-box"
+      }
+    ]
   }
 }

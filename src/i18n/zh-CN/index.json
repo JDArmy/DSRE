@@ -8,5 +8,8 @@
   "riskDetail": "风险详情",
   "riskKey": "风险ID",
   "riskTitle": "风险标题",
-  "riskDescription": "风险描述"
+  "riskDescription": "风险描述",
+  "implDetail": "防护手段",
+  "implTitle": "手段标题",
+  "implDescription": "手段描述"
 }

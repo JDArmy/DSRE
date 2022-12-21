@@ -54,7 +54,7 @@ import iconGithub from "@/components/icons/iconGithub.vue";
   width: 100%;
 }
 .el-main {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 .el-footer {
   position: fixed;

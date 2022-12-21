@@ -5,7 +5,13 @@
       "title": "泄露",
       "definition": "信息被泄露或窃取"
     },
-    "implements": [],
+    "implements": [
+      "DataEncryption",
+      "DataDesensitization",
+      "DataClassification",
+      "DataPartition",
+      "AccessControl"
+    ],
     "risks": [
       "R0001",
       "R0002",
@@ -44,7 +50,9 @@
       "title": "篡改",
       "definition": "篡改数据或代码"
     },
-    "implements": [],
+    "implements": [
+      "IntegrityVerification"
+    ],
     "risks": [
       "R0005",
       "R0006",
@@ -53,7 +61,6 @@
       "R0020",
       "R0021",
       "R0022",
-      "R0034",
       "R0035",
       "R0036",
       "R0037",
@@ -69,12 +76,17 @@
       "title": "拒绝服务",
       "definition": "消耗资源、服务可不用"
     },
-    "implements": [],
+    "implements": [
+      "LoadBalancing",
+      "DDoSDefense",
+      "DisasterRecoveryBackup"
+    ],
     "risks": [
       "R0008",
       "R0009",
       "R0023",
       "R0024",
+      "R0034",
       "R0038",
       "R0039",
       "R0040",
@@ -90,7 +102,14 @@
       "title": "仿冒",
       "definition": "冒充人或物"
     },
-    "implements": [],
+    "implements": [
+      "PasswordAuthentication",
+      "MultipleFactorAuthentication",
+      "CertificateAuthentication",
+      "IdentityManagement",
+      "SessionManagement",
+      "SingleSingOn"
+    ],
     "risks": [
       "R0010",
       "R0011",
@@ -114,7 +133,10 @@
       "title": "权限滥用",
       "definition": "未经授权获取、提升、滥用权限"
     },
-    "implements": [],
+    "implements": [
+      "PermissionMinimization",
+      "AuthorityManagement"
+    ],
     "risks": [
       "R0012",
       "R0026",
@@ -134,7 +156,11 @@
       "title": "抵赖",
       "definition": "无法认定做过某行为，超限使用"
     },
-    "implements": [],
+    "implements": [
+      "SecurityAudit",
+      "SecurityMonitoring",
+      "SecurityManagement"
+    ],
     "risks": [
       "R0013",
       "R0027",

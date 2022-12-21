@@ -2,6 +2,14 @@
   "Collection": {
     "title": "数据采集",
     "description": "",
+    "subcycle": {
+      "Acquisition": {
+        "title": "获取"
+      },
+      "Importation": {
+        "title": "导入"
+      }
+    },
     "risks": [
       "R0001",
       "R0002",
@@ -21,6 +29,14 @@
   "Transmission": {
     "title": "数据传输",
     "description": "",
+    "subcycle": {
+      "Despatch": {
+        "title": "发送"
+      },
+      "Reception": {
+        "title": "接收"
+      }
+    },
     "risks": [
       "R0014",
       "R0015",
@@ -41,6 +57,17 @@
   "Storage": {
     "title": "数据存储",
     "description": "",
+    "subcycle": {
+      "Persistence": {
+        "title": "持久化"
+      },
+      "Archive": {
+        "title": "归档"
+      },
+      "Backup": {
+        "title": "备份"
+      }
+    },
     "risks": [
       "R0028",
       "R0029",
@@ -72,6 +99,14 @@
   "Processing": {
     "title": "数据处理",
     "description": "",
+    "subcycle": {
+      "Calculation": {
+        "title": "计算"
+      },
+      "Display": {
+        "title": "展示"
+      }
+    },
     "risks": [
       "R0053",
       "R0054",
@@ -97,6 +132,17 @@
   "Exchange": {
     "title": "数据交换",
     "description": "",
+    "subcycle": {
+      "Sharing": {
+        "title": "共享"
+      },
+      "Delegation": {
+        "title": "委派"
+      },
+      "Exportation": {
+        "title": "出境"
+      }
+    },
     "risks": [
       "R0061",
       "R0062",
@@ -118,6 +164,14 @@
   "Destruction": {
     "title": "数据销毁",
     "description": "",
+    "subcycle": {
+      "Deletion": {
+        "title": "删除"
+      },
+      "Cancellation": {
+        "title": "销号"
+      }
+    },
     "risks": [
       "R0090",
       "R0091",
