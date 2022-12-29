@@ -2,7 +2,7 @@
 
 JDARMY DSRE 是英文 “Data Security Risk Enumeration” 的缩写，是一个开放式的数据安全风险枚举框架。
 
-在线查看：https://dsre.jd.army/
+在线查看：[DSRE.JD.ARMY]()
 
 > JDArmy DSRE 由JD.Army创建、拥有和进行管理。JD.Army是专注于挖掘和解决企业安全运行风险隐患的专业型红队。JD.Army保留自行决定定期更新 DSRE 和本文档的权利。虽然JD.Army拥有 DSRE 的所有权利和利益，但它许可公众自由使用，遵循相关开源协议。
 
