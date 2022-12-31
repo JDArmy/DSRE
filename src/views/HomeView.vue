@@ -128,30 +128,44 @@ let implDetailClose = () => {
           安全属性→<br />生命周期↓
         </div>
         <div v-else class="header-sec-attrs">
-          {{ $t(`DSRE.secAttrs.${saKey}.title`) }}&nbsp;(&nbsp;{{
-            saKey
-          }}&nbsp;)
-          <div>
-            <el-tag
-              type="danger"
-              :title="$t(`DSRE.secAttrs.${saKey}.threaten.definition`)"
-              >对应威胁：{{
-                $t(`DSRE.secAttrs.${saKey}.threaten.title`)
-              }}</el-tag
-            >
-          </div>
-          <div>
-            <el-button
-              type="default"
-              size="small"
-              effect="dark"
-              v-for="implKey in DSRE.secAttrs[saKey].implements"
-              :key="implKey"
-              @click="showImplDrawer(implKey)"
-            >
-              {{ $t(`DSRE.secImpls.${implKey}.title`) }}
-            </el-button>
-          </div>
+          <el-popover
+            :width="300"
+            popper-style="box-shadow: rgb(14 18 22 / 35%) 0px 10px 38px -10px, rgb(14 18 22 / 20%) 0px 10px 20px -15px; padding: 20px;"
+          >
+            <template #reference>
+              <div style="cursor: pointer">
+                {{ $t(`DSRE.secAttrs.${saKey}.title`) }}&nbsp;(&nbsp;{{
+                  saKey
+                }}&nbsp;)
+              </div>
+            </template>
+            <template #default>
+              <div style="display: flex; gap: 16px; flex-direction: column">
+                <div>
+                  <el-tag
+                    type="danger"
+                    :title="$t(`DSRE.secAttrs.${saKey}.threaten.definition`)"
+                    >对应威胁：{{
+                      $t(`DSRE.secAttrs.${saKey}.threaten.title`)
+                    }}</el-tag
+                  >
+                </div>
+                <div class="implements-pane">
+                  防护手段：
+                  <el-button
+                    type="default"
+                    size="small"
+                    effect="dark"
+                    v-for="implKey in DSRE.secAttrs[saKey].implements"
+                    :key="implKey"
+                    @click="showImplDrawer(implKey)"
+                  >
+                    {{ $t(`DSRE.secImpls.${implKey}.title`) }}
+                  </el-button>
+                </div>
+              </div>
+            </template>
+          </el-popover>
         </div></template
       >
       <template #default="scope">
@@ -218,6 +232,19 @@ let implDetailClose = () => {
 
 .header {
   margin-bottom: 10px;
+}
+
+.implements-pane {
+  font-size: 80%;
+  text-align: left;
+  padding: 5px;
+  border: solid 1px var(--el-color-success-light-3);
+  border-radius: 5px;
+  background-color: var(--el-color-success-light-9);
+  color: var(--el-color-success-dark-2);
+}
+.implements-pane .el-button {
+  margin: 3px;
 }
 
 .risk-list {
