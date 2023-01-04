@@ -4,6 +4,7 @@ import lifeCycle from "./lifeCycle.json";
 import secImpls from "./securityImplements.json";
 import risks from "./risks.json";
 import riskCtg from "./riskCategories.json";
+import threaten from "./threaten.json";
 
 const DSRE = {
   ...main, //DSRE框架基础信息
@@ -12,6 +13,7 @@ const DSRE = {
   secImpls: secImpls,
   risks: risks,
   riskCtg: riskCtg,
+  threaten: threaten,
 };
 
 export default DSRE;

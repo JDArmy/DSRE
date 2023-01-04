@@ -24,5 +24,6 @@ declare module '@vue/runtime-core' {
     RiskDetail: typeof import('./src/components/RiskDetail.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    ThreatenDetail: typeof import('./src/components/ThreatenDetail.vue')['default']
   }
 }

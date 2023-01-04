@@ -1,6 +1,6 @@
 {
   "name": "dsre",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",

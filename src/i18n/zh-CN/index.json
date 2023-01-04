@@ -11,5 +11,10 @@
   "riskDescription": "风险描述",
   "implDetail": "防护手段",
   "implTitle": "手段标题",
-  "implDescription": "手段描述"
+  "implDescription": "手段描述",
+  "threatenDetail": "威胁详细",
+  "threatenTitle": "威胁标题",
+  "threatenDescription": "威胁描述",
+  "threatenDefinition": "威胁定义",
+  "threatenExample": "威胁示例"
 }

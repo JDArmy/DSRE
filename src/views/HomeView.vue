@@ -4,6 +4,7 @@ import { ref, watch } from "vue";
 
 import RiskDetail from "@/components/RiskDetail.vue";
 import ImplementDetail from "@/components/ImplementDetail.vue";
+import ThreatenDetail from "@/components/ThreatenDetail.vue";
 import { useRouter, useRoute } from "vue-router";
 
 const secAttrs = ["header"].concat(Object.keys(DSRE.secAttrs));
@@ -78,7 +79,20 @@ let showImplDrawer = (implKey1: string) => {
   implKey.value = implKey1;
 };
 let implDetailClose = () => {
-  drawer.value = false;
+  implDrawer.value = false;
+};
+
+/////////////////////////////////////////////////////////////////////
+//start: 查看Threaten Information
+
+let threatenDrawer = ref(false);
+let threatenKey = ref("");
+let showThreatenDrawer = (threatenKey1: string) => {
+  threatenDrawer.value = true;
+  threatenKey.value = threatenKey1;
+};
+let threatenDetailClose = () => {
+  threatenDrawer.value = false;
 };
 </script>
 
@@ -130,6 +144,7 @@ let implDetailClose = () => {
         <div v-else class="header-sec-attrs">
           <el-popover
             :width="300"
+            trigger="click"
             popper-style="box-shadow: rgb(14 18 22 / 35%) 0px 10px 38px -10px, rgb(14 18 22 / 20%) 0px 10px 20px -15px; padding: 20px;"
           >
             <template #reference>
@@ -137,15 +152,6 @@ let implDetailClose = () => {
                 {{ $t(`DSRE.secAttrs.${saKey}.title`) }}&nbsp;(&nbsp;{{
                   saKey
                 }}&nbsp;)
-                <div>
-                  <el-tag
-                    type="danger"
-                    :title="$t(`DSRE.secAttrs.${saKey}.threaten.definition`)"
-                    >对应威胁：{{
-                      $t(`DSRE.secAttrs.${saKey}.threaten.title`)
-                    }}</el-tag
-                  >
-                </div>
               </div>
             </template>
             <template #default>
@@ -166,6 +172,19 @@ let implDetailClose = () => {
               </div>
             </template>
           </el-popover>
+          <div>
+            <el-tag
+              class="threaten-tag"
+              type="danger"
+              :title="
+                $t(`DSRE.threaten.${DSRE.secAttrs[saKey].threaten}.definition`)
+              "
+              @click="showThreatenDrawer(DSRE.secAttrs[saKey].threaten)"
+              >对应威胁：{{
+                $t(`DSRE.threaten.${DSRE.secAttrs[saKey].threaten}.title`)
+              }}</el-tag
+            >
+          </div>
         </div></template
       >
       <template #default="scope">
@@ -214,6 +233,11 @@ let implDetailClose = () => {
     :implDrawer="implDrawer"
     :implKey="implKey"
   />
+  <ThreatenDetail
+    v-on:drawer-close="threatenDetailClose"
+    :threatenDrawer="threatenDrawer"
+    :threatenKey="threatenKey"
+  />
 </template>
 <style>
 .el-tag {
@@ -223,6 +247,10 @@ let implDetailClose = () => {
 <style scoped>
 .header-sec-attrs {
   text-align: center;
+}
+
+.header-sec-attrs .el-tooltip__trigger:hover {
+  background-color: lightcyan;
 }
 
 .header-life-cycle {
@@ -245,6 +273,14 @@ let implDetailClose = () => {
 }
 .implements-pane .el-button {
   margin: 3px;
+}
+
+.threaten-tag {
+  cursor: pointer;
+}
+
+.threaten-tag:hover {
+  background-color: lightpink;
 }
 
 .risk-list {
