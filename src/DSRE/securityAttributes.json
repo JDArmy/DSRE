@@ -2,7 +2,7 @@
   "Confidentiality": {
     "title": "机密性",
     "threaten": {
-      "title": "泄露",
+      "title": "信息泄露",
       "definition": "信息被泄露或窃取"
     },
     "implements": [
@@ -99,7 +99,7 @@
   "Authentication": {
     "title": "认证",
     "threaten": {
-      "title": "仿冒",
+      "title": "仿冒/伪装",
       "definition": "冒充人或物"
     },
     "implements": [
@@ -130,7 +130,7 @@
   "Authorization": {
     "title": "授权",
     "threaten": {
-      "title": "权限滥用",
+      "title": "权限提升",
       "definition": "未经授权获取、提升、滥用权限"
     },
     "implements": [

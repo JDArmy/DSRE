@@ -137,10 +137,6 @@ let implDetailClose = () => {
                 {{ $t(`DSRE.secAttrs.${saKey}.title`) }}&nbsp;(&nbsp;{{
                   saKey
                 }}&nbsp;)
-              </div>
-            </template>
-            <template #default>
-              <div style="display: flex; gap: 16px; flex-direction: column">
                 <div>
                   <el-tag
                     type="danger"
@@ -150,6 +146,10 @@ let implDetailClose = () => {
                     }}</el-tag
                   >
                 </div>
+              </div>
+            </template>
+            <template #default>
+              <div style="display: flex; gap: 16px; flex-direction: column">
                 <div class="implements-pane">
                   防护手段：
                   <el-button
