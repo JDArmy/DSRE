@@ -172,7 +172,7 @@ let threatenDetailClose = () => {
               </div>
             </template>
           </el-popover>
-          <div>
+          <div class="hidden-sm-and-down">
             <el-tag
               class="threaten-tag"
               type="danger"
