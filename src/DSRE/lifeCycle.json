@@ -2,7 +2,7 @@
   "Collection": {
     "title": "数据采集",
     "description": "",
-    "subcycle": {
+    "subcycles": {
       "Acquisition": {
         "title": "获取"
       },
@@ -29,7 +29,7 @@
   "Transmission": {
     "title": "数据传输",
     "description": "",
-    "subcycle": {
+    "subcycles": {
       "Despatch": {
         "title": "发送"
       },
@@ -57,7 +57,7 @@
   "Storage": {
     "title": "数据存储",
     "description": "",
-    "subcycle": {
+    "subcycles": {
       "Persistence": {
         "title": "持久化"
       },
@@ -99,7 +99,7 @@
   "Processing": {
     "title": "数据处理",
     "description": "",
-    "subcycle": {
+    "subcycles": {
       "Calculation": {
         "title": "计算"
       },
@@ -132,7 +132,7 @@
   "Exchange": {
     "title": "数据交换",
     "description": "",
-    "subcycle": {
+    "subcycles": {
       "Sharing": {
         "title": "共享"
       },
@@ -164,7 +164,7 @@
   "Destruction": {
     "title": "数据销毁",
     "description": "",
-    "subcycle": {
+    "subcycles": {
       "Deletion": {
         "title": "删除"
       },

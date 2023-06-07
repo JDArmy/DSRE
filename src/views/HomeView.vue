@@ -194,6 +194,15 @@ let threatenDetailClose = () => {
               ? $t(`DSRE.lifeCycle.${scope.row}.title`)
               : null
           }}
+          <div>
+            <el-tag
+              type="info"
+              v-for="(subcycle, subcycleKey) in DSRE.lifeCycle[scope.row]
+                .subcycles"
+              v-key="subcycleKey"
+              >{{ subcycle.title }}</el-tag
+            >
+          </div>
         </div>
         <ul class="risk-list" v-else>
           <li
