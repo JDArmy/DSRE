@@ -132,22 +132,23 @@ let threatenDetailClose = () => {
     </el-col>
 
     <el-col>
-      <el-select v-model="rcKeySelected" :placeholder="$t('allCategories')">
-        <el-option key="" :label="$t('allCategories')" value=""></el-option>
-        <el-option
-          v-for="(rcVal, rcKey) in DSRE.riskCtg"
-          :key="rcKey"
-          :label="rcVal.title"
-          :value="rcKey"
-        />
-      </el-select>
-      <el-tag
-        v-if="rcKeySelected"
-        effect="plain"
-        style="margin-left: 10px"
-        :class="rcKeySelected"
-        >{{ $t(`DSRE.riskCtg.${rcKeySelected}.description`) }}</el-tag
-      >
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <el-select v-model="rcKeySelected" :placeholder="$t('allCategories')" style="width: 200px;">
+          <el-option key="" :label="$t('allCategories')" value=""></el-option>
+          <el-option
+            v-for="(rcVal, rcKey) in DSRE.riskCtg"
+            :key="rcKey"
+            :label="rcVal.title"
+            :value="rcKey"
+          />
+        </el-select>
+        <el-tag
+          v-if="rcKeySelected"
+          effect="plain"
+          :class="rcKeySelected"
+          >{{ $t(`DSRE.riskCtg.${rcKeySelected}.description`) }}</el-tag
+        >
+      </div>
     </el-col>
   </el-row>
 
