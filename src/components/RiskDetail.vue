@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch } from "vue";
+import { ref, watch, computed } from "vue";
 import DSRE from "@/DSRE";
 import "element-plus/es/components/drawer/style/css";
 
@@ -7,13 +7,27 @@ const props = defineProps<{
   drawer: boolean;
   rKey: string;
 }>();
-defineEmits(["drawerClose"]);
+const emit = defineEmits(["drawerClose", "showImplDrawer"]);
 
 const getCategory = () =>
   props.rKey ? DSRE.risks[props.rKey as keyof typeof DSRE.risks].category : "";
 
+// 获取该风险对应的安全属性和实现手段
+const getSecurityImplements = () => {
+  if (!props.rKey) return [];
+
+  // 遍历所有安全属性，找到包含该风险的属性
+  for (const [attrKey, attrValue] of Object.entries(DSRE.secAttrs)) {
+    if (attrValue.risks.includes(props.rKey)) {
+      return attrValue.implements;
+    }
+  }
+  return [];
+};
+
 const drawer = ref(props.drawer);
 const category = ref(getCategory());
+const securityImplements = computed(() => getSecurityImplements());
 
 watch(
   () => props.rKey + props.drawer,
@@ -25,6 +39,10 @@ watch(
 
 const getDrawerWidth = () => {
   return window.innerWidth > 600 ? 600 : "100%";
+};
+
+const handleImplClick = (implKey: string) => {
+  emit("showImplDrawer", implKey);
 };
 </script>
 
@@ -56,6 +74,22 @@ const getDrawerWidth = () => {
     <div class="desc">
       <strong>{{ $t("riskDescription") }}:&nbsp;</strong>
       {{ $t(`DSRE.risks.${rKey}.description`) }}
+    </div>
+    <div class="desc" v-if="securityImplements.length > 0">
+      <strong>{{ $t("securityControls") }}:&nbsp;</strong>
+      <div style="margin-top: 8px;">
+        <el-button
+          v-for="implKey in securityImplements"
+          :key="implKey"
+          type="primary"
+          size="small"
+          plain
+          @click="handleImplClick(implKey)"
+          style="margin: 4px;"
+        >
+          {{ $t(`DSRE.secImpls.${implKey}.title`) }}
+        </el-button>
+      </div>
     </div>
   </el-drawer>
   <!-- 手段详情页 -->

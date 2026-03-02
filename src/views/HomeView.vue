@@ -114,19 +114,19 @@ let threatenDetailClose = () => {
       <div class="stats-container">
         <div class="stat-card">
           <div class="stat-number">{{ totalRisks }}</div>
-          <div class="stat-label">风险条目</div>
+          <div class="stat-label">{{ $t("stats.riskItems") }}</div>
         </div>
         <div class="stat-card">
           <div class="stat-number">{{ totalCategories }}</div>
-          <div class="stat-label">风险类别</div>
+          <div class="stat-label">{{ $t("stats.riskCategories") }}</div>
         </div>
         <div class="stat-card">
           <div class="stat-number">{{ totalLifeCycles }}</div>
-          <div class="stat-label">生命周期</div>
+          <div class="stat-label">{{ $t("stats.lifeCycles") }}</div>
         </div>
         <div class="stat-card">
           <div class="stat-number">{{ totalImplements }}</div>
-          <div class="stat-label">防护手段</div>
+          <div class="stat-label">{{ $t("stats.securityControls") }}</div>
         </div>
       </div>
     </el-col>
@@ -165,7 +165,7 @@ let threatenDetailClose = () => {
     >
       <template #header>
         <div v-if="saKey == 'header'" class="header-sec-attrs">
-          安全属性→<br />生命周期↓
+          {{ $t("tableHeader.securityAttributes") }}→<br />{{ $t("tableHeader.lifeCycles") }}↓
         </div>
         <div v-else class="header-sec-attrs">
           <el-popover
@@ -175,15 +175,13 @@ let threatenDetailClose = () => {
           >
             <template #reference>
               <div style="cursor: pointer">
-                {{ $t(`DSRE.secAttrs.${saKey}.title`) }}&nbsp;(&nbsp;{{
-                  saKey
-                }}&nbsp;)
+                {{ $t(`DSRE.secAttrs.${saKey}.title`) }}<template v-if="$t(`DSRE.secAttrs.${saKey}.title`) !== saKey">&nbsp;(&nbsp;{{ saKey }}&nbsp;)</template>
               </div>
             </template>
             <template #default>
               <div style="display: flex; gap: 16px; flex-direction: column">
                 <div class="implements-pane">
-                  防护手段：
+                  {{ $t("securityControls") }}：
                   <el-button
                     type="default"
                     size="small"
@@ -206,7 +204,7 @@ let threatenDetailClose = () => {
                 $t(`DSRE.threaten.${DSRE.secAttrs[saKey].threaten}.definition`)
               "
               @click="showThreatenDrawer(DSRE.secAttrs[saKey].threaten)"
-              >对应威胁：{{
+              >{{ $t("threats") }}：{{
                 $t(`DSRE.threaten.${DSRE.secAttrs[saKey].threaten}.title`)
               }}</el-tag
             >
@@ -225,8 +223,8 @@ let threatenDetailClose = () => {
               type="info"
               v-for="(subcycle, subcycleKey) in DSRE.lifeCycle[scope.row]
                 .subcycles"
-              v-key="subcycleKey"
-              >{{ subcycle.title }}</el-tag
+              :key="subcycleKey"
+              >{{ $t(`DSRE.lifeCycle.${scope.row}.subcycles.${subcycleKey}.title`) }}</el-tag
             >
           </div>
         </div>
@@ -260,6 +258,7 @@ let threatenDetailClose = () => {
   </el-table>
   <RiskDetail
     v-on:drawer-close="riskDetailClose"
+    v-on:show-impl-drawer="showImplDrawer"
     :drawer="drawer"
     :rKey="riskKey"
   />
@@ -350,10 +349,11 @@ let threatenDetailClose = () => {
 
 .threaten-tag {
   cursor: pointer;
+  transition: opacity 0.2s;
 }
 
 .threaten-tag:hover {
-  background-color: lightpink;
+  opacity: 0.8;
 }
 
 .risk-list {

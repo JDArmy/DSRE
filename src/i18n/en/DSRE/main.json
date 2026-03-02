@@ -1,0 +1,13 @@
+{
+  "name": "JDARMY DSRE",
+  "version": "0.2.2",
+  "updated": "2026-03-02",
+  "title": "Data Security Risk Enumeration",
+  "keyword": "Data Security Risk Enumeration",
+  "description": "DSRE (Data Security Risk Enumeration) is an open knowledge framework",
+  "maintainer": "Monyer",
+  "license": "Apache 2.0",
+  "rights": "The DSRE framework is created, owned and managed by JD.Army. JD.Army is a professional red team focused on discovering and resolving enterprise security operational risk vulnerabilities. JD.Army reserves the right to update DSRE periodically at its sole discretion. While JD.Army owns all rights and interests in DSRE, it licenses the public to use it freely under the relevant open source license.",
+  "website": "https://DSRE.jd.army/",
+  "github": "https://github.com/JDArmy/DSRE"
+}

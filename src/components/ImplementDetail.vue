@@ -23,7 +23,7 @@ watch(
 );
 
 const getDrawerWidth = () => {
-  return window.innerWidth > 600 ? 600 : "100%";
+  return window.innerWidth > 450 ? 450 : "100%";
 };
 </script>
 

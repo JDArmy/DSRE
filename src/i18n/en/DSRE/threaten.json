@@ -1,0 +1,38 @@
+{
+  "Spoofing": {
+    "title": "Spoofing",
+    "definition": "Impersonating a person or thing",
+    "description": "Refers to violating user authentication information. An attacker obtains a user's personal information or something that enables them to replay the authentication process. Spoofing threats can impersonate valid system users or resources to access the system and compromise system security.",
+    "example": "Example: A malicious impersonator (man-in-the-middle) forges IP (Internet Service Provider) packets and hijacks the connection to the server. The vulnerability here is that the communication protocol does not consider confidentiality and integrity design; authentication protocols that use passwords without encrypting them reveal credential information to eavesdroppers, who can then use this information to impersonate users. The vulnerability here is that credential information is not properly encrypted; 'Trojan horse' attacks are typical spoofing. For example, on a browser, a web page may manage to construct a completely visual copy of the system login and trick users into entering their name and password without suspecting they are actually providing information to a website; forged emails. The vulnerability in this case is the lack of confidentiality and integrity of email information."
+  },
+  "Tampering": {
+    "title": "Tampering",
+    "definition": "Tampering with data or code",
+    "description": "Refers to modifying system or user data with or without detection. Unauthorized changes to information in storage or transmission, formatting hard drives, malicious intruders introducing undetectable network packets in communications, and undetectable changes to sensitive files are all tampering threats.",
+    "example": "Example: Packet injection attacks where data on the line is modified. The vulnerability for this threat is the lack of integrity of data sent on the link; modifying file data without authorization checks. The vulnerability for this threat is missing access checks, buffer overflows, no integrity checks, etc.; data corruption caused by executing incorrect code. Vulnerabilities include unhandled memory allocation failures, uninitialized memory, use of freed memory resources, and miscalculations such as division by zero; data is corrupted or modified by Trojans and viruses. The vulnerability refers to software's susceptibility to Trojan viruses."
+  },
+  "Repudiation": {
+    "title": "Repudiation",
+    "definition": "Unable to confirm an action was performed, excessive use",
+    "description": "Refers to the ability of an untrusted user to perform illegal operations without being tracked. Repudiation threats relate to users (malicious or otherwise) who can deny wrongdoing without any way to prove it.",
+    "example": "Example: Undetected attacker attempts to break into user accounts. Vulnerability of missing failed login audits. Users inadvertently or maliciously delete sensitive files. Vulnerability of missing successful audits of object access. Malicious users have the ability to deny sending messages. Vulnerability of lack of information signatures and signature verification before accepting information."
+  },
+  "InformationDisclosure": {
+    "title": "Information Disclosure",
+    "definition": "Information is leaked or stolen",
+    "description": "Refers to compromising users' private or critical business information. Information disclosure threats expose information to people who should not see it. Users being able to read files they have not been granted access to, and intruders being able to read data during transmission between two computers, are information disclosure threats. Note that unlike spoofing threats, here the attacker directly obtains information rather than obtaining it by deceiving legitimate users.",
+    "example": "Example: Data leakage caused by buffer overflow attacks. Sophisticated attacks that place handcrafted call stacks on vulnerable system calls (calls to the operating system or privileged servers) can cause privileged code to return information, such as kernel memory dumps, to unauthorized users. The vulnerability here is buffer overflow in system services. Data snooping due to man-in-the-middle attacks, and simple attacks where unencrypted packets are sniffed. There are also sophisticated attacks where flawed authentication protocols enable eavesdroppers to calculate or crack session keys, allowing eavesdroppers to decrypt all encrypted and signed data. These vulnerabilities are all security flaws in network protocols. Unauthorized access to data. Examples include servers that miss impersonating clients or return data without performing access checks (even if they perform impersonation). Vulnerabilities include missed impersonation (i.e., clients gain access to anything the server can access) or missed access checks."
+  },
+  "DenialOfService": {
+    "title": "Denial of Service",
+    "definition": "Consuming resources, service unavailable",
+    "description": "Refers to making the system temporarily unavailable or unusable, such as attacks that can force a restart or reboot of user machines. A denial of service threat exists when an attacker can temporarily make system resources (processing time, storage, etc.) unavailable or unusable.",
+    "example": "Example: SYN attacks and packet bombs that exploit various network protocol vulnerabilities, causing server crashes; sophisticated buffer overflow issues, such as parameters without length, can cause the server to chase a non-existent memory location and crash. Similarly, GetAdmin-style handcrafted stacks can cause privileged instructions to shut down the system; common coding errors such as unhandled memory allocation failures (referencing invalid pointers), uninitialized memory (using bad data), using freed memory and resources (referencing invalid memory), and calculation errors (division by 0) all cause exceptions that crash software; weak software design (inherent in design or due to misconfiguration), such as a process taking up all CPU time."
+  },
+  "ElevationOfPrivilege": {
+    "title": "Elevation of Privilege",
+    "definition": "Unauthorized acquisition, elevation, abuse of privileges",
+    "description": "Refers to an unprivileged user gaining privileged access, thus having sufficient authority to damage and compromise the entire system. The more dangerous aspect of this type of threat is compromising the system in an undetected manner, allowing users to exploit privileges without the system administrator's knowledge. Privilege elevation threats include situations that allow attackers to have more privileges than they should, completely compromising the security of the entire system and causing extreme system damage.",
+    "example": "Example: Buffer overruns, such as handcrafted stacks in GetAdmin attacks, cause user code to execute with high privileges, compromising the trusted computing base of the entire operating system; the ability to run executable files without unauthorized user consent allows criminals to perform privileged operations, such as making themselves privileged users; missing or improper access checks in the security subsystem itself can lead to privilege elevation. For example, if administrator group membership is updated without access checks, it allows an unauthorized user to become a system administrator."
+  }
+}

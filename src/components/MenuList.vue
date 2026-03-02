@@ -6,34 +6,23 @@ import "element-plus/es/components/dropdown-menu/style/css";
 import "element-plus/es/components/dropdown-item/style/css";
 import "element-plus/theme-chalk/display.css";
 
-// import iconTranslate from "@/components/icons/iconTranslate.vue";
-import iconGithub from "@/components/icons/iconGithub.vue";
+import iconTranslate from "@/components/icons/iconTranslate.vue";
+import GithubPane from "@/components/GithubPane.vue";
 import { ArrowDown } from "@element-plus/icons-vue";
 
 import {
   ElMenu,
   ElIcon,
   ElMenuItem,
-  // ElDropdown,
-  // ElDropdownMenu,
-  // ElDropdownItem,
+  ElDropdown,
+  ElDropdownMenu,
+  ElDropdownItem,
 } from "element-plus";
 
-import { i18n, languages } from "@/i18n";
+import { useI18n } from "vue-i18n";
+import { languages, setLocale } from "@/i18n";
 
-const lang = localStorage.getItem("locale");
-if (
-  lang &&
-  lang !== i18n.global.locale &&
-  Object.keys(languages).includes(lang)
-) {
-  i18n.global.locale = lang as keyof typeof languages;
-}
-
-// const handleCommand = (command: keyof typeof languages) => {
-//   i18n.global.locale = command;
-//   localStorage.setItem("locale", command);
-// };
+const { locale } = useI18n();
 </script>
 
 <template>
@@ -81,8 +70,9 @@ if (
     <el-menu-item class="" index="/risks">{{ $t("menu.risks") }}</el-menu-item>
 
     <el-dropdown class="outside-link">
-      <span class="el-dropdown-link"
-        >JDArmy<el-icon>
+      <span class="el-dropdown-link">
+        JDArmy
+        <el-icon>
           <arrow-down />
         </el-icon>
       </span>
@@ -117,28 +107,25 @@ if (
       </template>
     </el-dropdown>
 
-    <div class="github">
-      <a href="https://github.com/JDArmy/DSRE" target="_blank">
-        <icon-github />
-      </a>
-    </div>
-    <!-- <el-dropdown class="translate" @command="handleCommand">
+    <el-dropdown class="translate" trigger="click" @command="setLocale">
       <span class="el-dropdown-link">
         <icon-translate />
+        <span>{{ languages[locale as keyof typeof languages] }}</span>
+        <el-icon><arrow-down /></el-icon>
       </span>
       <template #dropdown>
         <el-dropdown-menu>
           <el-dropdown-item
-            v-for="(langName, langKey) in languages"
-            :key="langKey"
-            :command="langKey"
-            :disabled="i18n.global.locale == langKey"
-          >
-            {{ langName }}
-          </el-dropdown-item>
+            v-for="(label, lang) in languages"
+            :key="lang"
+            :command="lang"
+            :class="{ 'is-active': locale === lang }"
+          >{{ label }}</el-dropdown-item>
         </el-dropdown-menu>
       </template>
-    </el-dropdown> -->
+    </el-dropdown>
+
+    <github-pane class="github" />
   </el-menu>
 </template>
 
@@ -177,11 +164,23 @@ if (
   padding: 0 0 0 10px;
 }
 
-.translate,
-.github {
+.translate {
   color: var(--el-menu-text-color);
   margin: auto 10px;
   cursor: pointer;
+}
+
+.translate .el-dropdown-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.github {
+  color: var(--el-menu-text-color);
+  margin: auto 10px;
+  display: flex;
+  align-items: center;
 }
 
 .outside-link {
@@ -189,6 +188,12 @@ if (
   color: var(--el-menu-text-color);
   padding: 0 var(--el-menu-base-level-padding);
   cursor: pointer;
+}
+
+.outside-link .el-dropdown-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .outside-link-menu a {

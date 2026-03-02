@@ -1,6 +1,6 @@
 {
   "Confidentiality": {
-    "title": "机密性",
+    "title": "Confidentiality",
     "threaten": "InformationDisclosure",
     "implements": [
       "DataEncryption",
@@ -68,7 +68,7 @@
     ]
   },
   "Integrity": {
-    "title": "完整性",
+    "title": "Integrity",
     "threaten": "Tampering",
     "implements": [
       "IntegrityVerification",
@@ -96,7 +96,7 @@
     ]
   },
   "Availability": {
-    "title": "可用性",
+    "title": "Availability",
     "threaten": "DenialOfService",
     "implements": [
       "LoadBalancing",
@@ -120,7 +120,7 @@
     ]
   },
   "Authentication": {
-    "title": "认证",
+    "title": "Authentication",
     "threaten": "Spoofing",
     "implements": [
       "PasswordAuthentication",
@@ -150,7 +150,7 @@
     ]
   },
   "Authorization": {
-    "title": "授权",
+    "title": "Authorization",
     "threaten": "ElevationOfPrivilege",
     "implements": [
       "PermissionMinimization",
@@ -173,7 +173,7 @@
     ]
   },
   "Auditability": {
-    "title": "审计",
+    "title": "Auditability",
     "threaten": "Repudiation",
     "implements": [
       "SecurityAudit",

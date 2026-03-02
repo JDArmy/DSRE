@@ -1,0 +1,30 @@
+{
+  "Compliance": {
+    "title": "Compliance",
+    "description": "Risks arising from non-compliance with relevant data security laws and regulations issued by national regulatory authorities, functional departments and organizations"
+  },
+  "Norms": {
+    "title": "Norms",
+    "description": "Risks arising from non-compliance with relevant data security norms that should be possessed and observed, excluding 'Compliance'"
+  },
+  "Functional": {
+    "title": "Functional",
+    "description": "A category of risks caused by functional bugs in the implementation process of data systems"
+  },
+  "Weakness": {
+    "title": "Weakness",
+    "description": "Risks that will not be directly exploited by attackers, but may cause problems when combined with certain vulnerabilities or in certain specific scenarios"
+  },
+  "Vulnerability": {
+    "title": "Vulnerability",
+    "description": "Risks that may be discovered and exploited by attackers to cause certain data security impacts"
+  },
+  "Confrontational": {
+    "title": "Confrontational",
+    "description": "A category of risks that have a certain confrontational stage and require continuous capability improvement"
+  },
+  "AIRisk": {
+    "title": "AI Security",
+    "description": "Data security risks arising from the introduction of artificial intelligence, large language models (LLM), machine learning and other technologies, including model attacks, training data security, AI system data leakage, etc."
+  }
+}

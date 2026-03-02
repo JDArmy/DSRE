@@ -24,18 +24,26 @@
     "description": "数据分类是指根据组织数据的属性或特征，将其按照一定的原则和方法进行区分和归类，并建立起一定的分类体系和排列顺序，以便更好地管理和使用组织数据的过程。数据分级是指按照公共数据遭到破坏(包括攻击、泄露、篡改、非法使用等)后对受侵害各体合法权益(国家安全、社会秩序、公共利益以及公民、法人和其他组织)的危害程度，对公共数据进行定级，为数据全生命周期管理进行的安全策略制定。",
     "references": [
       {
-        "title": "一文读懂数据安全分类分级",
-        "link": "https://blog.csdn.net/Dtwave_/article/details/124943506"
+        "title": "GB/T 43697-2024 数据安全技术 数据分类分级规则",
+        "link": "https://www.china-briefing.com/news/china-data-classification-standards-important-data/"
+      },
+      {
+        "title": "百度百科-数据分类",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%88%86%E7%B1%BB"
       }
     ]
   },
   "DataPartition": {
     "title": "分区分域",
-    "description": "区分“资源管理范围”，管理员只能管理属于自己域内的资源。针对某些大企业或者单位，存在按部门或分支机构进行划分的二级维护管理员。一级管理员根据组织机构划分和管理区域，将计算机划分所属区域。二级管理员只能查看和管理自己区域的计算机。",
+    "description": "区分资源管理范围，管理员只能管理属于自己域内的资源。针对某些大企业或者单位，存在按部门或分支机构进行划分的二级维护管理员。一级管理员根据组织机构划分和管理区域，将计算机划分所属区域。二级管理员只能查看和管理自己区域的计算机。",
     "references": [
       {
-        "title": "分区分域中的分域概念",
-        "link": "https://forum.huawei.com/enterprise/zh/thread/580935957857845248"
+        "title": "百度百科-网络分区",
+        "link": "https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E5%88%86%E5%8C%BA"
+      },
+      {
+        "title": "GB/T 43697-2024 数据安全技术规范",
+        "link": "https://www.china-briefing.com/news/china-data-classification-standards-important-data/"
       }
     ]
   },
@@ -54,8 +62,12 @@
     "description": "数据完整性指数据不会被非授权更改或破坏，如篡改、删除、插入等。利用密码技术在密钥的控制下生成被保护数据的认证符，密钥私密性保证只有授权用户才能产生正确的认证符，密码技术的安全特性保证只要对数据做了非授权修改，则通过认证符一定可以检测，即认证符对于数据的变化非常敏感",
     "references": [
       {
-        "title": "数据完整性验证",
-        "link": "https://blog.csdn.net/m0_56534254/article/details/127102613"
+        "title": "NIST FIPS 202 - SHA-3 Standard",
+        "link": "https://csrc.nist.gov/pubs/fips/202/final"
+      },
+      {
+        "title": "百度百科-数据完整性",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%AE%8C%E6%95%B4%E6%80%A7"
       }
     ]
   },
@@ -111,7 +123,7 @@
   },
   "AuthorityManagement": {
     "title": "权限管理",
-    "description": "权限管理，一般指根据系统设置的安全规则或者安全策略，用户可以访问而且只能访问自己被授权的资源，不多不少。权限管理几乎出现在任何系统里面，只要有用户和密码的系统。 很多人常将“用户身份认证”、“密码加密”、“系统管理”等概念与权限管理概念混淆。",
+    "description": "权限管理，一般指根据系统设置的安全规则或者安全策略，用户可以访问而且只能访问自己被授权的资源，不多不少。权限管理几乎出现在任何系统里面，只要有用户和密码的系统。很多人常将用户身份认证、密码加密、系统管理等概念与权限管理概念混淆。",
     "references": [
       {
         "title": "百度百科-权限管理",
@@ -204,8 +216,12 @@
     "description": "隐私计算是指在保护数据本身不对外泄露的前提下实现数据分析计算的技术集合，主要包括安全多方计算（MPC）、联邦学习（FL）、可信执行环境（TEE）、同态加密（HE）、差分隐私（DP）等技术。隐私计算使数据在不离开本地的情况下参与联合分析，实现「数据可用不可见」，有效保护数据安全与个人隐私。",
     "references": [
       {
-        "title": "隐私计算技术综述",
-        "link": "https://www.infoq.cn/article/privacy-computing-technology"
+        "title": "百度百科-隐私计算",
+        "link": "https://baike.baidu.com/item/%E9%9A%90%E7%A7%81%E8%AE%A1%E7%AE%97"
+      },
+      {
+        "title": "Privacy Computing: Theory and Technology (Springer)",
+        "link": "https://link.springer.com/book/10.1007/978-981-99-4943-4"
       }
     ]
   },
@@ -234,8 +250,180 @@
     "description": "数据血缘追踪是指对数据从产生、流转、加工到消费全过程进行记录和可视化的技术手段。通过建立数据血缘关系图谱，可以追踪数据的来源、流向、转换过程及使用情况，支持数据安全审计、合规检查、数据泄露溯源以及影响范围分析，是数据治理和数据安全管理的重要基础能力。",
     "references": [
       {
-        "title": "数据血缘技术解析",
-        "link": "https://www.infoq.cn/article/data-lineage-technology"
+        "title": "Data Lineage - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Data_lineage"
+      },
+      {
+        "title": "Google Cloud Data Lineage Documentation",
+        "link": "https://cloud.google.com/dataplex/docs/about-data-lineage"
+      }
+    ]
+  },
+  "DataLossPrevention": {
+    "title": "数据防泄漏",
+    "description": "数据防泄漏（DLP）是一种通过监控、检测和阻止敏感数据未授权传输的安全技术。DLP系统可以识别、监控和保护使用中的数据、传输中的数据和静态存储的数据，防止数据通过网络、终端设备、移动存储等渠道泄露。主要包括网络DLP、终端DLP和存储DLP三种部署方式。",
+    "references": [
+      {
+        "title": "百度百科-数据防泄漏",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E9%98%B2%E6%B3%84%E6%BC%8F"
+      },
+      {
+        "title": "NIST SP 800-53 - Security and Privacy Controls",
+        "link": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"
+      }
+    ]
+  },
+  "DatabaseAudit": {
+    "title": "数据库审计",
+    "description": "数据库审计是指对数据库访问行为进行记录、分析和报告的过程。通过监控数据库操作，记录用户访问行为、SQL语句执行、数据变更等信息，帮助发现异常访问模式、SQL注入攻击、权限滥用等安全威胁，同时满足合规要求（如等保、GDPR、SOX等）对数据访问审计的要求。",
+    "references": [
+      {
+        "title": "百度百科-数据库审计",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%A1%E8%AE%A1"
+      },
+      {
+        "title": "OWASP Database Security",
+        "link": "https://owasp.org/www-community/vulnerabilities/SQL_Injection"
+      }
+    ]
+  },
+  "APISecurityGateway": {
+    "title": "API安全网关",
+    "description": "API安全网关是保护API接口安全的关键组件，提供统一的API访问控制、身份认证、授权管理、流量控制、请求签名验证、防重放攻击等功能。通过在API调用链路中插入安全检查机制，防止未授权访问、数据篡改、DDoS攻击等安全威胁，确保API接口的安全性和可用性。",
+    "references": [
+      {
+        "title": "OWASP API Security Top 10",
+        "link": "https://owasp.org/www-project-api-security/"
+      },
+      {
+        "title": "NIST API Security Best Practices",
+        "link": "https://csrc.nist.gov/publications/detail/sp/800-204/final"
+      }
+    ]
+  },
+  "DataWatermarking": {
+    "title": "数据水印",
+    "description": "数据水印技术是在数据中嵌入不可见或难以察觉的标识信息，用于数据版权保护、数据溯源和泄露追踪。水印信息具有隐蔽性、鲁棒性和可验证性，即使数据被复制、修改或部分删除，仍可通过水印信息追溯数据来源。包括数字水印、数据库水印、文档水印等多种形式。",
+    "references": [
+      {
+        "title": "百度百科-数字水印",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E5%AD%97%E6%B0%B4%E5%8D%B0"
+      },
+      {
+        "title": "Database Watermarking - IEEE",
+        "link": "https://ieeexplore.ieee.org/document/8424730"
+      }
+    ]
+  },
+  "Tokenization": {
+    "title": "数据令牌化",
+    "description": "令牌化（Tokenization）是一种数据保护技术，通过用随机生成的令牌（Token）替换敏感数据，原始数据存储在安全的令牌库中。与加密不同，令牌化是不可逆的替换过程，令牌本身不包含任何敏感信息。广泛应用于支付卡信息保护（PCI DSS合规）、个人身份信息保护等场景。",
+    "references": [
+      {
+        "title": "PCI Security Standards - Tokenization",
+        "link": "https://www.pcisecuritystandards.org/documents/Tokenization_Guidelines_Info_Supplement.pdf"
+      },
+      {
+        "title": "百度百科-令牌化",
+        "link": "https://baike.baidu.com/item/%E4%BB%A4%E7%89%8C%E5%8C%96"
+      }
+    ]
+  },
+  "DataMasking": {
+    "title": "数据屏蔽",
+    "description": "数据屏蔽是通过修改、替换或隐藏敏感数据来保护数据隐私的技术。包括静态数据屏蔽（SDM）和动态数据屏蔽（DDM）两种方式。静态屏蔽用于创建脱敏的数据副本供非生产环境使用，动态屏蔽则在数据访问时实时屏蔽敏感字段。常用于开发测试环境、数据分析、第三方数据共享等场景。",
+    "references": [
+      {
+        "title": "百度百科-数据屏蔽",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%B1%8F%E8%94%BD"
+      },
+      {
+        "title": "NIST Data Masking Guidelines",
+        "link": "https://csrc.nist.gov/glossary/term/data_masking"
+      }
+    ]
+  },
+  "SecuritySandbox": {
+    "title": "安全沙箱",
+    "description": "安全沙箱是一种隔离执行环境，用于在受控环境中运行不受信任的代码或处理敏感数据，防止恶意代码影响主系统。沙箱通过资源隔离、权限限制、网络隔离等机制，将潜在风险控制在隔离区域内。包括应用沙箱、浏览器沙箱、容器安全、虚拟化隔离等多种实现方式。",
+    "references": [
+      {
+        "title": "百度百科-沙箱技术",
+        "link": "https://baike.baidu.com/item/%E6%B2%99%E7%AE%B1%E6%8A%80%E6%9C%AF"
+      },
+      {
+        "title": "OWASP Sandbox Security",
+        "link": "https://owasp.org/www-community/controls/Sandbox"
+      }
+    ]
+  },
+  "DataDestruction": {
+    "title": "数据销毁",
+    "description": "数据销毁是指通过技术手段彻底删除或破坏数据，使其无法被恢复的过程。包括软件擦除（多次覆写）、消磁、物理销毁等方法。数据销毁是数据生命周期管理的重要环节，确保数据在不再需要时被安全处置，防止数据残留导致的泄露风险，满足数据保护法规对数据删除权的要求。",
+    "references": [
+      {
+        "title": "NIST SP 800-88 - Media Sanitization",
+        "link": "https://csrc.nist.gov/pubs/sp/800/88/r1/final"
+      },
+      {
+        "title": "百度百科-数据销毁",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E9%94%80%E6%AF%81"
+      }
+    ]
+  },
+  "EndpointSecurity": {
+    "title": "终端安全",
+    "description": "终端安全是保护终端设备（如PC、笔记本、移动设备）上数据安全的综合防护体系。包括终端检测与响应（EDR）、移动设备管理（MDM）、终端加密、应用白名单、USB管控等技术。通过在数据访问的最后一公里实施安全控制，防止数据通过终端设备泄露、被恶意软件窃取或遭受攻击。",
+    "references": [
+      {
+        "title": "百度百科-终端安全",
+        "link": "https://baike.baidu.com/item/%E7%BB%88%E7%AB%AF%E5%AE%89%E5%85%A8"
+      },
+      {
+        "title": "NIST Endpoint Security Guide",
+        "link": "https://csrc.nist.gov/publications/detail/sp/800-46/rev-2/final"
+      }
+    ]
+  },
+  "BlockchainDataProtection": {
+    "title": "区块链数据保护",
+    "description": "区块链数据保护利用区块链技术的去中心化、不可篡改、可追溯等特性来保护数据安全。通过将数据哈希或关键操作记录上链，实现数据存证、审计追踪、防篡改验证等功能。适用于数据确权、电子证据保全、供应链溯源、数据共享凭证等场景，为数据安全提供可信的技术保障。",
+    "references": [
+      {
+        "title": "百度百科-区块链",
+        "link": "https://baike.baidu.com/item/%E5%8C%BA%E5%9D%97%E9%93%BE"
+      },
+      {
+        "title": "NIST Blockchain Technology Overview",
+        "link": "https://csrc.nist.gov/publications/detail/nistir/8202/final"
+      }
+    ]
+  },
+  "KeyManagement": {
+    "title": "密钥管理",
+    "description": "密钥管理是对加密密钥进行生成、存储、分发、轮换、撤销和销毁的全生命周期管理过程。包括密钥管理系统（KMS）、硬件安全模块（HSM）等技术。有效的密钥管理是确保加密系统安全的基础，防止密钥泄露、滥用或丢失导致的数据安全风险，满足合规要求对密钥保护的规定。",
+    "references": [
+      {
+        "title": "NIST SP 800-57 - Key Management",
+        "link": "https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final"
+      },
+      {
+        "title": "百度百科-密钥管理",
+        "link": "https://baike.baidu.com/item/%E5%AF%86%E9%92%A5%E7%AE%A1%E7%90%86"
+      }
+    ]
+  },
+  "SecurityConfigurationManagement": {
+    "title": "安全配置管理",
+    "description": "安全配置管理是指建立和维护系统、网络、应用的安全配置基线，并持续监控配置变更和漂移的过程。通过自动化工具检测不安全配置、未授权变更、配置偏离基线等问题，及时修复安全隐患。包括配置基线管理、配置审计、配置合规检查、自动化修复等功能，是安全运营的重要组成部分。",
+    "references": [
+      {
+        "title": "NIST SP 800-128 - Security Configuration Management",
+        "link": "https://csrc.nist.gov/pubs/sp/800/128/final"
+      },
+      {
+        "title": "CIS Benchmarks",
+        "link": "https://www.cisecurity.org/cis-benchmarks"
       }
     ]
   }

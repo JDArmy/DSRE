@@ -1,0 +1,430 @@
+{
+  "DataEncryption": {
+    "title": "Data Encryption",
+    "description": "Data encryption is a time-honored technology that refers to converting plaintext into ciphertext through encryption algorithms and encryption keys, while decryption is the process of restoring ciphertext to plaintext through decryption algorithms and decryption keys. Its core is cryptography. Data encryption is still one of the most reliable methods for computer systems to protect information. It uses cryptographic technology to encrypt information, achieving information concealment, thereby protecting information security.",
+    "references": [
+      {
+        "title": "Baidu Encyclopedia - Data Encryption",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%8A%A0%E5%AF%86/11048982?fr=aladdin"
+      }
+    ]
+  },
+  "DataDesensitization": {
+    "title": "Data Desensitization",
+    "description": "Data desensitization refers to the transformation of certain sensitive information through desensitization rules to achieve reliable protection of sensitive privacy data. In cases involving customer security data or some commercially sensitive data, real data is modified and provided for testing use without violating system rules, such as ID numbers, mobile phone numbers, card numbers, customer numbers and other personal information that need to be desensitized.",
+    "references": [
+      {
+        "title": "Baidu Encyclopedia - Data Desensitization",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E8%84%B1%E6%95%8F?fromModule=lemma_search-box"
+      }
+    ]
+  },
+  "DataClassification": {
+    "title": "Classification and Grading",
+    "description": "Data classification refers to the process of distinguishing and categorizing organizational data according to certain principles and methods based on the attributes or characteristics of the data, and establishing a certain classification system and arrangement order to better manage and use organizational data. Data grading refers to grading public data according to the degree of harm to the legitimate rights and interests of the infringed parties (national security, social order, public interests, and citizens, legal persons and other organizations) after public data is damaged (including attacks, leaks, tampering, illegal use, etc.), to formulate security strategies for data lifecycle management.",
+    "references": [
+      {
+        "title": "GB/T 43697-2024 Data Security Technology - Data Classification and Grading Rules",
+        "link": "https://www.china-briefing.com/news/china-data-classification-standards-important-data/"
+      },
+      {
+        "title": "Baidu Encyclopedia - Data Classification",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%88%86%E7%B1%BB"
+      }
+    ]
+  },
+  "DataPartition": {
+    "title": "Partition and Domain",
+    "description": "Distinguishing 'resource management scope', administrators can only manage resources within their own domain. For some large enterprises or units, there are secondary maintenance administrators divided by department or branch. Primary administrators divide computers into their respective areas according to organizational structure and management areas. Secondary administrators can only view and manage computers in their own areas.",
+    "references": [
+      {
+        "title": "Baidu Encyclopedia - Network Partition",
+        "link": "https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E5%88%86%E5%8C%BA"
+      },
+      {
+        "title": "GB/T 43697-2024 Data Security Technology Specification",
+        "link": "https://www.china-briefing.com/news/china-data-classification-standards-important-data/"
+      }
+    ]
+  },
+  "AccessControl": {
+    "title": "Access Control",
+    "description": "Access control is a technology that almost all systems (including computer systems and non-computer systems) need to use. Access control is a technology that restricts users' access to certain information items or restricts the use of certain control functions based on user identity and certain defined groups to which they belong.",
+    "references": [
+      {
+        "title": "Baidu Encyclopedia - Access Control",
+        "link": "https://baike.baidu.com/item/%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6/8545517?fr=aladdin"
+      }
+    ]
+  },
+  "IntegrityVerification": {
+    "title": "Integrity Verification",
+    "description": "Data integrity means that data will not be changed or destroyed by unauthorized parties, such as tampering, deletion, insertion, etc. Using cryptographic technology under the control of keys to generate authenticators for protected data, key privacy ensures that only authorized users can produce correct authenticators, and the security characteristics of cryptographic technology ensure that any unauthorized modification to the data can be detected through the authenticator, that is, the authenticator is very sensitive to changes in data.",
+    "references": [
+      {
+        "title": "NIST FIPS 202 - SHA-3 Standard",
+        "link": "https://csrc.nist.gov/pubs/fips/202/final"
+      },
+      {
+        "title": "Baidu Encyclopedia - Data Integrity",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%AE%8C%E6%95%B4%E6%80%A7"
+      }
+    ]
+  },
+  "LoadBalancing": {
+    "title": "Load Balancing",
+    "description": "Load balancing, whose English name is Load Balance, means to balance and distribute the load (work tasks) to multiple operating units for operation, such as FTP servers, Web servers, enterprise core application servers and other main task servers, etc., thereby completing work tasks collaboratively. Load balancing is built on the original network structure, it provides a transparent, cheap and effective method to expand the bandwidth of servers and network devices, strengthen network data processing capabilities, increase throughput, and improve network availability and flexibility.",
+    "references": [
+      {
+        "title": "Baidu Encyclopedia - Load Balancing",
+        "link": "https://baike.baidu.com/item/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1?fromModule=lemma_search-box"
+      }
+    ]
+  },
+  "DDoSDefense": {
+    "title": "DDoS Defense",
+    "description": "DDoS distributed denial of service attack refers to multiple attackers located in different locations simultaneously launching attacks on one or several targets, or an attacker controlling multiple machines located in different locations and using these machines to simultaneously attack victims. Because the attack originates from different places, this type of attack is called a distributed denial of service attack, in which there can be multiple attackers. DDoS defense is mainly to reduce the damage caused by DDoS attacks.",
+    "references": [
+      {
+        "title": "Baidu Encyclopedia - DDoS Defense",
+        "link": "https://baike.baidu.com/item/DDOS%E9%98%B2%E5%BE%A1?fromModule=lemma_search-box"
+      }
+    ]
+  },
+  "DisasterRecoveryBackup": {
+    "title": "Disaster Recovery and Backup",
+    "description": "Disaster recovery backup refers to the establishment of a remote data system that is an exact copy of the local critical application data in real time or at regular intervals. When the system encounters disasters such as fires, earthquakes, etc., it ensures the security and rapid recovery of production data to ensure the normal operation of the business.",
+    "references": [
+      {
+        "title": "Baidu Encyclopedia - Disaster Recovery Backup",
+        "link": "https://baike.baidu.com/item/%E5%AE%B9%E7%81%BE%E5%A4%87%E4%BB%BD?fromModule=lemma_search-box"
+      }
+    ]
+  },
+  "PasswordAuthentication": {
+    "title": "Password Authentication",
+    "description": "Password authentication is the most common authentication method. Users prove their identity by providing a username and password. The system verifies the user's identity by comparing the password entered by the user with the password stored in the system.",
+    "references": [
+      {
+        "title": "Baidu Encyclopedia - Password Authentication",
+        "link": "https://baike.baidu.com/item/%E5%AF%86%E7%A0%81%E8%AE%A4%E8%AF%81?fromModule=lemma_search-box"
+      }
+    ]
+  },
+  "MultipleFactorAuthentication": {
+    "title": "Multi-Factor Authentication",
+    "description": "Multi-factor authentication (MFA) is a security system that requires multiple authentication methods from independent credential categories to verify the user's identity for login or other transactions. Multi-factor authentication combines two or more independent credentials: what the user knows (password), what the user has (security token), and what the user is (biometric verification).",
+    "references": [
+      {
+        "title": "Baidu Encyclopedia - Multi-Factor Authentication",
+        "link": "https://baike.baidu.com/item/%E5%A4%9A%E5%9B%A0%E7%B4%A0%E8%AE%A4%E8%AF%81?fromModule=lemma_search-box"
+      }
+    ]
+  },
+  "CertificateAuthentication": {
+    "title": "Certificate Authentication",
+    "description": "Certificate authentication is an authentication method based on public key infrastructure (PKI). It uses digital certificates to verify the identity of users or devices. Digital certificates are electronic documents issued by certificate authorities (CA) that contain the certificate holder's public key and identity information.",
+    "references": [
+      {
+        "title": "Baidu Encyclopedia - Digital Certificate",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6?fromModule=lemma_search-box"
+      }
+    ]
+  },
+  "IdentityManagement": {
+    "title": "Identity Management",
+    "description": "Identity management is a framework of policies and technologies for ensuring that appropriate users have appropriate access to technology resources. Identity management systems fall under the overarching umbrella of IT security and data management. Identity and access management systems not only identify, authenticate, and control access for individuals who will be utilizing IT resources but also the hardware and applications employees need to access.",
+    "references": [
+      {
+        "title": "What is Identity Management",
+        "link": "https://www.cisco.com/c/en/us/products/security/identity-services-engine/what-is-identity-management.html"
+      }
+    ]
+  },
+  "SessionManagement": {
+    "title": "Session Management",
+    "description": "Session management is a process by which a server maintains the state of an entity interacting with it. This is required for a server to remember how to react to subsequent requests throughout a transaction. Sessions are maintained on the server by a session identifier which can be passed back and forth between the client and server when transmitting and receiving requests.",
+    "references": [
+      {
+        "title": "OWASP Session Management Cheat Sheet",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html"
+      }
+    ]
+  },
+  "SingleSingOn": {
+    "title": "Single Sign-On",
+    "description": "Single sign-on (SSO) is an authentication scheme that allows a user to log in with a single ID to any of several related, yet independent, software systems. True single sign-on allows the user to log in once and access services without re-entering authentication factors.",
+    "references": [
+      {
+        "title": "Baidu Encyclopedia - Single Sign-On",
+        "link": "https://baike.baidu.com/item/%E5%8D%95%E7%82%B9%E7%99%BB%E5%BD%95?fromModule=lemma_search-box"
+      }
+    ]
+  },
+  "PermissionMinimization": {
+    "title": "Permission Minimization",
+    "description": "The principle of least privilege (PoLP) is an information security concept which maintains that a user or entity should only have access to the specific data, resources and applications needed to complete a required task. Organizations that follow the principle of least privilege can improve their security posture by significantly reducing their attack surface and risk of malware spread.",
+    "references": [
+      {
+        "title": "Principle of Least Privilege",
+        "link": "https://www.paloaltonetworks.com/cyberpedia/what-is-the-principle-of-least-privilege"
+      }
+    ]
+  },
+  "AuthorityManagement": {
+    "title": "Authority Management",
+    "description": "Authority management refers to the management of user permissions in the system, including the assignment, modification, and revocation of permissions. Through authority management, it can be ensured that users can only access resources and perform operations within their authority, thereby protecting system security.",
+    "references": [
+      {
+        "title": "Role-Based Access Control",
+        "link": "https://en.wikipedia.org/wiki/Role-based_access_control"
+      }
+    ]
+  },
+  "SecurityAudit": {
+    "title": "Security Audit",
+    "description": "Security audit is an independent review and examination of system records and activities in order to test the adequacy of system controls, ensure compliance with established security policy and procedures, detect breaches in security services, and recommend any changes that are indicated for countermeasures.",
+    "references": [
+      {
+        "title": "Baidu Encyclopedia - Security Audit",
+        "link": "https://baike.baidu.com/item/%E5%AE%89%E5%85%A8%E5%AE%A1%E8%AE%A1?fromModule=lemma_search-box"
+      }
+    ]
+  },
+  "SecurityMonitoring": {
+    "title": "Security Monitoring",
+    "description": "Security monitoring is the automated process of collecting and analyzing indicators of potential security threats, then triaging these threats with appropriate action. Security monitoring tools can detect security threats in real time and provide alerts to security teams so they can respond quickly.",
+    "references": [
+      {
+        "title": "What is Security Monitoring",
+        "link": "https://www.splunk.com/en_us/data-insider/what-is-security-monitoring.html"
+      }
+    ]
+  },
+  "SecurityManagement": {
+    "title": "Security Management",
+    "description": "Security management is the identification of an organization's assets (including people, buildings, machines, systems and information assets), followed by the development, documentation, and implementation of policies and procedures for protecting these assets.",
+    "references": [
+      {
+        "title": "Baidu Encyclopedia - Security Management",
+        "link": "https://baike.baidu.com/item/%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86?fromModule=lemma_search-box"
+      }
+    ]
+  },
+  "PrivacyComputing": {
+    "title": "Privacy Computing",
+    "description": "Privacy computing is a technology system that enables data analysis and computation while protecting data privacy. It allows data to be 'available but not visible' during circulation and fusion, achieving data value release while protecting data security and privacy. Main technologies include secure multi-party computation (MPC), federated learning (FL), trusted execution environments (TEE), homomorphic encryption (HE), and differential privacy (DP).",
+    "references": [
+      {
+        "title": "Baidu Encyclopedia - Privacy Computing",
+        "link": "https://baike.baidu.com/item/%E9%9A%90%E7%A7%81%E8%AE%A1%E7%AE%97"
+      },
+      {
+        "title": "Privacy Computing: Theory and Technology (Springer)",
+        "link": "https://link.springer.com/book/10.1007/978-981-99-4943-4"
+      }
+    ]
+  },
+  "ZeroTrustArchitecture": {
+    "title": "Zero Trust Architecture",
+    "description": "Zero Trust Architecture (ZTA) is a security model with the core principle of 'never trust, always verify'. In the field of data security, zero trust requires continuous verification of every data access request, including identity authentication, device health status, access context, etc., and dynamically authorizes based on the principle of least privilege to prevent data leakage caused by internal threats and lateral movement.",
+    "references": [
+      {
+        "title": "NIST SP 800-207 Zero Trust Architecture",
+        "link": "https://csrc.nist.gov/publications/detail/sp/800-207/final"
+      }
+    ]
+  },
+  "AISecurityProtection": {
+    "title": "AI Security Protection",
+    "description": "Data security protection measures for AI/ML systems, including: training data quality detection and poisoning defense, model input/output filtering (preventing prompt injection and sensitive data output), AI access control and permission management, model behavior monitoring and anomaly detection, and guardrails mechanisms for large language models, ensuring security and compliance of AI systems in data processing.",
+    "references": [
+      {
+        "title": "OWASP Top 10 for LLM Applications",
+        "link": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
+      }
+    ]
+  },
+  "DataLineageTracking": {
+    "title": "Data Lineage Tracking",
+    "description": "Data lineage tracking refers to technical means of recording and visualizing the entire process of data from generation, flow, processing to consumption. By establishing a data lineage relationship graph, it can track the source, flow, transformation process and usage of data, support data security auditing, compliance checking, data leakage tracing and impact scope analysis, and is an important basic capability for data governance and data security management.",
+    "references": [
+      {
+        "title": "Data Lineage - Wikipedia",
+        "link": "https://en.wikipedia.org/wiki/Data_lineage"
+      },
+      {
+        "title": "Google Cloud Data Lineage Documentation",
+        "link": "https://cloud.google.com/dataplex/docs/about-data-lineage"
+      }
+    ]
+  },
+  "DataLossPrevention": {
+    "title": "Data Loss Prevention",
+    "description": "Data Loss Prevention (DLP) is a security technology that monitors, detects, and blocks unauthorized transmission of sensitive data. DLP systems can identify, monitor, and protect data in use, data in motion, and data at rest, preventing data leakage through networks, endpoint devices, mobile storage, and other channels. It mainly includes three deployment methods: network DLP, endpoint DLP, and storage DLP.",
+    "references": [
+      {
+        "title": "Baidu Encyclopedia - Data Loss Prevention",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E9%98%B2%E6%B3%84%E6%BC%8F"
+      },
+      {
+        "title": "NIST SP 800-53 - Security and Privacy Controls",
+        "link": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"
+      }
+    ]
+  },
+  "DatabaseAudit": {
+    "title": "Database Audit",
+    "description": "Database audit refers to the process of recording, analyzing, and reporting database access behaviors. By monitoring database operations and recording user access behaviors, SQL statement execution, data changes, and other information, it helps discover abnormal access patterns, SQL injection attacks, privilege abuse, and other security threats, while meeting compliance requirements (such as Classified Protection, GDPR, SOX, etc.) for data access auditing.",
+    "references": [
+      {
+        "title": "Baidu Encyclopedia - Database Audit",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%A1%E8%AE%A1"
+      },
+      {
+        "title": "OWASP Database Security",
+        "link": "https://owasp.org/www-community/vulnerabilities/SQL_Injection"
+      }
+    ]
+  },
+  "APISecurityGateway": {
+    "title": "API Security Gateway",
+    "description": "API Security Gateway is a key component for protecting API interface security, providing unified API access control, identity authentication, authorization management, traffic control, request signature verification, anti-replay attack, and other functions. By inserting security check mechanisms in the API call chain, it prevents security threats such as unauthorized access, data tampering, and DDoS attacks, ensuring the security and availability of API interfaces.",
+    "references": [
+      {
+        "title": "OWASP API Security Top 10",
+        "link": "https://owasp.org/www-project-api-security/"
+      },
+      {
+        "title": "NIST API Security Best Practices",
+        "link": "https://csrc.nist.gov/publications/detail/sp/800-204/final"
+      }
+    ]
+  },
+  "DataWatermarking": {
+    "title": "Data Watermarking",
+    "description": "Data watermarking technology embeds invisible or imperceptible identification information in data for data copyright protection, data tracing, and leakage tracking. Watermark information has characteristics of concealment, robustness, and verifiability. Even if data is copied, modified, or partially deleted, the data source can still be traced through watermark information. It includes various forms such as digital watermarking, database watermarking, and document watermarking.",
+    "references": [
+      {
+        "title": "Baidu Encyclopedia - Digital Watermarking",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E5%AD%97%E6%B0%B4%E5%8D%B0"
+      },
+      {
+        "title": "Database Watermarking - IEEE",
+        "link": "https://ieeexplore.ieee.org/document/8424730"
+      }
+    ]
+  },
+  "Tokenization": {
+    "title": "Tokenization",
+    "description": "Tokenization is a data protection technology that replaces sensitive data with randomly generated tokens, with original data stored in a secure token vault. Unlike encryption, tokenization is an irreversible replacement process, and tokens themselves contain no sensitive information. It is widely used in payment card information protection (PCI DSS compliance), personal identity information protection, and other scenarios.",
+    "references": [
+      {
+        "title": "PCI Security Standards - Tokenization",
+        "link": "https://www.pcisecuritystandards.org/documents/Tokenization_Guidelines_Info_Supplement.pdf"
+      },
+      {
+        "title": "Baidu Encyclopedia - Tokenization",
+        "link": "https://baike.baidu.com/item/%E4%BB%A4%E7%89%8C%E5%8C%96"
+      }
+    ]
+  },
+  "DataMasking": {
+    "title": "Data Masking",
+    "description": "Data masking is a technology that protects data privacy by modifying, replacing, or hiding sensitive data. It includes two methods: Static Data Masking (SDM) and Dynamic Data Masking (DDM). Static masking is used to create desensitized data copies for non-production environments, while dynamic masking masks sensitive fields in real-time during data access. It is commonly used in development and testing environments, data analysis, third-party data sharing, and other scenarios.",
+    "references": [
+      {
+        "title": "Baidu Encyclopedia - Data Masking",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%B1%8F%E8%94%BD"
+      },
+      {
+        "title": "NIST Data Masking Guidelines",
+        "link": "https://csrc.nist.gov/glossary/term/data_masking"
+      }
+    ]
+  },
+  "SecuritySandbox": {
+    "title": "Security Sandbox",
+    "description": "Security sandbox is an isolated execution environment used to run untrusted code or process sensitive data in a controlled environment, preventing malicious code from affecting the main system. Sandboxes control potential risks within isolated areas through resource isolation, permission restrictions, network isolation, and other mechanisms. It includes various implementation methods such as application sandboxes, browser sandboxes, container security, and virtualization isolation.",
+    "references": [
+      {
+        "title": "Baidu Encyclopedia - Sandbox Technology",
+        "link": "https://baike.baidu.com/item/%E6%B2%99%E7%AE%B1%E6%8A%80%E6%9C%AF"
+      },
+      {
+        "title": "OWASP Sandbox Security",
+        "link": "https://owasp.org/www-community/controls/Sandbox"
+      }
+    ]
+  },
+  "DataDestruction": {
+    "title": "Data Destruction",
+    "description": "Data destruction refers to the process of completely deleting or destroying data through technical means so that it cannot be recovered. It includes methods such as software erasure (multiple overwrites), degaussing, and physical destruction. Data destruction is an important part of data lifecycle management, ensuring that data is securely disposed of when no longer needed, preventing leakage risks caused by data remnants, and meeting data protection regulations' requirements for the right to data deletion.",
+    "references": [
+      {
+        "title": "NIST SP 800-88 - Media Sanitization",
+        "link": "https://csrc.nist.gov/pubs/sp/800/88/r1/final"
+      },
+      {
+        "title": "Baidu Encyclopedia - Data Destruction",
+        "link": "https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E9%94%80%E6%AF%81"
+      }
+    ]
+  },
+  "EndpointSecurity": {
+    "title": "Endpoint Security",
+    "description": "Endpoint security is a comprehensive protection system that protects data security on endpoint devices (such as PCs, laptops, mobile devices). It includes technologies such as Endpoint Detection and Response (EDR), Mobile Device Management (MDM), endpoint encryption, application whitelisting, and USB control. By implementing security controls at the last mile of data access, it prevents data leakage through endpoint devices, theft by malware, or attacks.",
+    "references": [
+      {
+        "title": "Baidu Encyclopedia - Endpoint Security",
+        "link": "https://baike.baidu.com/item/%E7%BB%88%E7%AB%AF%E5%AE%89%E5%85%A8"
+      },
+      {
+        "title": "NIST Endpoint Security Guide",
+        "link": "https://csrc.nist.gov/publications/detail/sp/800-46/rev-2/final"
+      }
+    ]
+  },
+  "BlockchainDataProtection": {
+    "title": "Blockchain Data Protection",
+    "description": "Blockchain data protection utilizes the decentralization, immutability, and traceability characteristics of blockchain technology to protect data security. By recording data hashes or key operations on the blockchain, it achieves functions such as data notarization, audit tracking, and tamper-proof verification. It is suitable for scenarios such as data rights confirmation, electronic evidence preservation, supply chain traceability, and data sharing credentials, providing trusted technical guarantees for data security.",
+    "references": [
+      {
+        "title": "Baidu Encyclopedia - Blockchain",
+        "link": "https://baike.baidu.com/item/%E5%8C%BA%E5%9D%97%E9%93%BE"
+      },
+      {
+        "title": "NIST Blockchain Technology Overview",
+        "link": "https://csrc.nist.gov/publications/detail/nistir/8202/final"
+      }
+    ]
+  },
+  "KeyManagement": {
+    "title": "Key Management",
+    "description": "Key management is the full lifecycle management process of generating, storing, distributing, rotating, revoking, and destroying encryption keys. It includes technologies such as Key Management Systems (KMS) and Hardware Security Modules (HSM). Effective key management is the foundation for ensuring the security of encryption systems, preventing data security risks caused by key leakage, abuse, or loss, and meeting compliance requirements for key protection.",
+    "references": [
+      {
+        "title": "NIST SP 800-57 - Key Management",
+        "link": "https://csrc.nist.gov/pubs/sp/800/57/pt1/r5/final"
+      },
+      {
+        "title": "Baidu Encyclopedia - Key Management",
+        "link": "https://baike.baidu.com/item/%E5%AF%86%E9%92%A5%E7%AE%A1%E7%90%86"
+      }
+    ]
+  },
+  "SecurityConfigurationManagement": {
+    "title": "Security Configuration Management",
+    "description": "Security configuration management refers to the process of establishing, implementing, monitoring, and maintaining security baseline configurations for systems and applications. It includes baseline configuration management, configuration drift detection, automated compliance checking, and other functions. By ensuring that systems maintain secure configuration states, it prevents security vulnerabilities caused by misconfigurations and meets compliance requirements for security configuration management.",
+    "references": [
+      {
+        "title": "NIST SP 800-128 - Security Configuration Management",
+        "link": "https://csrc.nist.gov/pubs/sp/800/128/final"
+      },
+      {
+        "title": "CIS Benchmarks",
+        "link": "https://www.cisecurity.org/cis-benchmarks"
+      }
+    ]
+  }
+}

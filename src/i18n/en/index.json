@@ -1,1 +1,32 @@
-{}
+{
+  "menu": {
+    "home": "Home",
+    "risks": "Risks"
+  },
+  "seeMoreInDesktop": "View the full version on desktop",
+  "allCategories": "All Categories",
+  "riskDetail": "Risk Detail",
+  "riskKey": "Risk ID",
+  "riskTitle": "Risk Title",
+  "riskDescription": "Risk Description",
+  "implDetail": "Security Control",
+  "implTitle": "Control Title",
+  "implDescription": "Control Description",
+  "threatenDetail": "Threat Detail",
+  "threatenTitle": "Threat Title",
+  "threatenDescription": "Threat Description",
+  "threatenDefinition": "Threat Definition",
+  "threatenExample": "Threat Example",
+  "stats": {
+    "riskItems": "Risk Items",
+    "riskCategories": "Risk Categories",
+    "lifeCycles": "Life Cycles",
+    "securityControls": "Security Controls"
+  },
+  "tableHeader": {
+    "securityAttributes": "Security Attributes",
+    "lifeCycles": "Life Cycles"
+  },
+  "securityControls": "Security Controls",
+  "threats": "Threats"
+}

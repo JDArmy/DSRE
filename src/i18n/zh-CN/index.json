@@ -16,5 +16,17 @@
   "threatenTitle": "威胁标题",
   "threatenDescription": "威胁描述",
   "threatenDefinition": "威胁定义",
-  "threatenExample": "威胁示例"
+  "threatenExample": "威胁示例",
+  "stats": {
+    "riskItems": "风险条目",
+    "riskCategories": "风险类别",
+    "lifeCycles": "生命周期",
+    "securityControls": "防护手段"
+  },
+  "tableHeader": {
+    "securityAttributes": "安全属性",
+    "lifeCycles": "生命周期"
+  },
+  "securityControls": "防护手段",
+  "threats": "威胁"
 }

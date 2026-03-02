@@ -1,6 +1,6 @@
 {
   "name": "dsre",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
+    "axios": "^1.13.6",
     "element-plus": "^2.9.1",
     "pinia": "^2.3.0",
     "vue": "^3.5.13",

@@ -15,9 +15,17 @@ const messages = {
   cn: { ...cn, DSRE: cnDSRE },
 };
 
+const LOCALE_KEY = "locale";
+
 const i18n = createI18n({
-  locale: "cn",
+  legacy: false,
+  locale: localStorage.getItem(LOCALE_KEY) || "cn",
   messages: messages,
 });
 
-export { i18n, languages };
+const setLocale = (locale: string) => {
+  localStorage.setItem(LOCALE_KEY, locale);
+  (i18n.global.locale as unknown as { value: string }).value = locale;
+};
+
+export { i18n, languages, setLocale };

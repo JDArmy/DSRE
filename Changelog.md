@@ -1,5 +1,85 @@
 # Changelog
 
+## v0.3.0 (2026-03-02)
+
+### 新增 / Added
+
+- 新增 12 项数据安全防护手段：
+  - **DataLossPrevention** (数据防泄漏) - DLP技术，监控和阻止敏感数据未授权传输
+  - **DatabaseAudit** (数据库审计) - 记录和分析数据库访问行为，检测异常操作
+  - **APISecurityGateway** (API安全网关) - API访问控制、签名验证、防重放攻击
+  - **DataWatermarking** (数据水印) - 数据溯源和泄露追踪技术
+  - **Tokenization** (数据令牌化) - 用令牌替换敏感数据，支持PCI DSS合规
+  - **DataMasking** (数据屏蔽) - 静态/动态数据屏蔽，保护非生产环境数据
+  - **SecuritySandbox** (安全沙箱) - 隔离执行环境，防止恶意代码影响
+  - **DataDestruction** (数据销毁) - 安全删除和数据擦除技术
+  - **EndpointSecurity** (终端安全) - EDR、MDM等终端数据保护
+  - **BlockchainDataProtection** (区块链数据保护) - 利用区块链不可篡改特性保护数据
+  - **KeyManagement** (密钥管理) - 密钥全生命周期管理，KMS/HSM
+  - **SecurityConfigurationManagement** (安全配置管理) - 基线配置和合规检查
+
+### 优化 / Improved
+
+- 更新安全属性与防护手段的对应关系：
+  - **机密性 (Confidentiality)**: 新增 6 项防护手段（DLP、水印、令牌化、屏蔽、终端安全、密钥管理）
+  - **完整性 (Integrity)**: 新增 2 项防护手段（区块链、数据库审计）
+  - **可用性 (Availability)**: 新增 1 项防护手段（安全沙箱）
+  - **认证 (Authentication)**: 新增 1 项防护手段（API安全网关）
+  - **授权 (Authorization)**: 新增 1 项防护手段（API安全网关）
+  - **审计 (Auditability)**: 新增 4 项防护手段（数据库审计、区块链、配置管理、数据销毁）
+- 同步更新中英文翻译文件，保持数据一致性
+- 所有新增防护手段均包含权威参考链接（NIST、OWASP、PCI DSS、IEEE等）
+
+## v0.3.0 (2026-03-02)
+
+### 修复 / Fixed
+
+- 修复 `src/DSRE/securityImplements.json` 中的参考链接问题：
+  - 替换 3 个失效链接（华为论坛、InfoQ 文章）为权威来源
+  - 升级 2 个 CSDN 博客链接为官方标准文档（NIST、GB/T）
+  - 新增多个权威参考来源（NIST FIPS 202、Wikipedia、Google Cloud 文档等）
+- 同步更新 `src/i18n/en/DSRE/securityImplements.json` 英文翻译文件
+- 修复 JSON 文件中的智能引号和中文引号导致的解析错误
+
+## v0.2.2 (2026-03-02)
+
+### 新增 / Added
+
+- 风险详情弹窗中显示相关的安全实现手段，点击可查看详细信息
+- 新增完整的英文翻译文件：
+  - `src/i18n/en/DSRE/main.json` - 框架基础信息
+  - `src/i18n/en/DSRE/riskCategories.json` - 风险类别
+  - `src/i18n/en/DSRE/risks.json` - 全部 112 项风险条目
+  - `src/i18n/en/DSRE/lifeCycle.json` - 数据生命周期
+  - `src/i18n/en/DSRE/threaten.json` - 威胁模型
+  - `src/i18n/en/DSRE/securityAttributes.json` - 安全属性
+  - `src/i18n/en/DSRE/securityImplements.json` - 安全实现手段
+- 完善 `src/i18n/en/index.json` 和 `src/i18n/zh-CN/index.json` 界面文本翻译
+  - 统计卡片标签（风险条目、风险类别、生命周期、防护手段）
+  - 表格标题（安全属性、生命周期）
+  - 其他界面元素（防护手段、威胁）
+
+### 修复 / Fixed
+
+- 完善英文国际化翻译，同步所有 DSRE 数据文件的英文翻译
+- 修复英文界面下缺失翻译键导致的警告信息
+- 修复统计卡片、表格标题等界面元素的硬编码中文文本
+- 修复语言选择器图标未对齐问题
+- 修复 Vue 指令语法错误（v-key → :key）
+- 修复英文界面下安全属性列标题显示冗余括号问题
+- 修复生命周期子阶段标签未翻译问题
+
+## v0.2.1 (2026-03-02)
+
+### 新增 / Added
+
+- 菜单栏添加中英文切换功能
+- GitHub 图标后显示 star 数和 fork 数
+
+### 优化 / Improved
+
+- 优化威胁标签悬停效果，使用透明度过渡替代背景色变化
+
 ## v0.2.0 (2026-03-02)
 
 ### 新增 / Added
