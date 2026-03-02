@@ -1,13 +1,15 @@
 {
   "Collection": {
     "title": "数据采集",
-    "description": "",
+    "description": "从各种来源收集数据的过程",
     "subcycles": {
       "Acquisition": {
-        "title": "获取"
+        "title": "获取",
+        "definition": "通过各种方式主动获取数据，包括用户输入、传感器采集、API调用等"
       },
       "Importation": {
-        "title": "导入"
+        "title": "导入",
+        "definition": "从外部系统或文件中导入已有数据到当前系统"
       }
     },
     "risks": [
@@ -31,13 +33,15 @@
   },
   "Transmission": {
     "title": "数据传输",
-    "description": "",
+    "description": "在不同系统或节点之间传递数据的过程",
     "subcycles": {
       "Despatch": {
-        "title": "发送"
+        "title": "发送",
+        "definition": "将数据从本地系统发送到远程系统或其他节点"
       },
       "Reception": {
-        "title": "接收"
+        "title": "接收",
+        "definition": "从远程系统或其他节点接收数据到本地系统"
       }
     },
     "risks": [
@@ -59,16 +63,19 @@
   },
   "Storage": {
     "title": "数据存储",
-    "description": "",
+    "description": "将数据保存在存储介质中以供后续使用",
     "subcycles": {
       "Persistence": {
-        "title": "持久化"
+        "title": "持久化",
+        "definition": "将数据从内存写入到持久化存储介质（如数据库、文件系统）"
       },
       "Archive": {
-        "title": "归档"
+        "title": "归档",
+        "definition": "将不常用的历史数据转移到长期存储介质中"
       },
       "Backup": {
-        "title": "备份"
+        "title": "备份",
+        "definition": "创建数据副本以防止数据丢失或损坏"
       }
     },
     "risks": [
@@ -106,13 +113,15 @@
   },
   "Processing": {
     "title": "数据处理",
-    "description": "",
+    "description": "对数据进行加工、分析和展示的过程",
     "subcycles": {
       "Calculation": {
-        "title": "计算"
+        "title": "计算",
+        "definition": "对数据进行运算、分析、转换等处理操作"
       },
       "Display": {
-        "title": "展示"
+        "title": "展示",
+        "definition": "将数据以可视化或其他形式呈现给用户"
       }
     },
     "risks": [
@@ -148,16 +157,19 @@
   },
   "Exchange": {
     "title": "数据交换",
-    "description": "",
+    "description": "与第三方共享或转移数据的过程",
     "subcycles": {
       "Sharing": {
-        "title": "共享"
+        "title": "共享",
+        "definition": "与其他组织或个人共享数据的使用权限"
       },
       "Delegation": {
-        "title": "委派"
+        "title": "委派",
+        "definition": "将数据处理任务委托给第三方服务提供商"
       },
       "Exportation": {
-        "title": "出境"
+        "title": "出境",
+        "definition": "将数据传输到境外或跨境传输"
       }
     },
     "risks": [
@@ -186,13 +198,15 @@
   },
   "Destruction": {
     "title": "数据销毁",
-    "description": "",
+    "description": "永久删除或销毁数据的过程",
     "subcycles": {
       "Deletion": {
-        "title": "删除"
+        "title": "删除",
+        "definition": "从系统中删除数据，使其无法被正常访问"
       },
       "Cancellation": {
-        "title": "销号"
+        "title": "销号",
+        "definition": "注销用户账号并删除相关的所有个人数据"
       }
     },
     "risks": [

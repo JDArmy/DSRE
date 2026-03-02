@@ -1,85 +1,99 @@
-## 介绍
+# JDARMY DSRE - Data Security Risk Enumeration
 
-JDARMY DSRE 是英文 “Data Security Risk Enumeration” 的缩写，是一个开放式的数据安全风险枚举框架。
+[中文](README_ZH.md) | English
 
-在线查看：[DSRE.JD.ARMY]()
+## Introduction
 
-> JDArmy DSRE 由JD.Army创建、拥有和进行管理。JD.Army是专注于挖掘和解决企业安全运行风险隐患的专业型红队。JD.Army保留自行决定定期更新 DSRE 和本文档的权利。虽然JD.Army拥有 DSRE 的所有权利和利益，但它许可公众自由使用，遵循相关开源协议。
+JDARMY DSRE (Data Security Risk Enumeration) is an open-source framework for enumerating data security risks.
 
-## 背景
+Online Demo: [DSRE.JD.ARMY](https://dsre.jd.army)
 
-目前各大头部互联网企业均建立了蓝军团队，通过“以攻促防”来评估和加强安全能力建设。“以攻促防”的形式多种多样，有实战攻防演习、红蓝对抗演练、蓝军专项评估、沙盘推演等模式。然而在蓝军工作过程中，始终有两大方面问题没有解决：**一是**如何量化“以攻促防”的结果，**二是**“以攻促防”的范畴与方法。
+> JDArmy DSRE is created, owned, and managed by JD.Army. JD.Army is a professional red team focused on identifying and resolving enterprise security operational risks. JD.Army reserves the right to periodically update DSRE and this documentation at its sole discretion. While JD.Army owns all rights and interests in DSRE, it licenses the public to use it freely under the relevant open-source license.
 
-针对解决第一个问题，我们于今年7月首次向社区开源了“JDARMY RTASS红蓝对抗评分框架”([RTASS.JD.ARMY]())，参照CVSS的评分模式，可以以调查问卷的形式评价红蓝双方在单次演练中的有效输出，同时对企业与业务的安全水平进行衡量。我们的红蓝双方通过在实战攻防演习后在系统上进行背靠背打分，得分基本趋向一致，并获得红蓝双方的认同，所以该评分框架具备客观的评价能力，大体上可以解决蓝军工作中的第一方面问题。
+## Background
 
-针对第二方面问题，我们认为传统的蓝军仅将战场聚焦在网络安全攻防范畴，无法更全面地评估和模拟企业在信息安全领域面临的各方面威胁。譬如传统蓝军其实是对黑客的模拟，我们称之为“网络蓝军”，但对黑灰产、内鬼、供应链、合作第三方、监管方是缺乏模拟能力的。
+Currently, major internet companies have established blue team units to evaluate and strengthen security capabilities through "offense-driven defense." This approach takes various forms, including practical attack-defense exercises, red-blue confrontation drills, blue team assessments, and tabletop exercises. However, two major issues remain unresolved in blue team operations: **first**, how to quantify the results of "offense-driven defense," and **second**, the scope and methodology of "offense-driven defense."
 
-黑灰产一般对应于业务安全问题。对黑灰产的模拟，我们称之为“业务蓝军”。业务蓝军照比网络蓝军有着本质的不同，我们不能再通过CYBER KILLCHAIN、MITRE ATT&CK、OWASP TOP 10等这些网络安全思维和方法论来搞。为此，我们于11月向社区开源了“JDARMY BREAK业务风险枚举与规避知识框架”（[BREAK.JD.ARMY]()），参照MITRE ATT&CK的模式，按照业务、内容、身份、对抗等不同维度，枚举了80项风险（包含24项子风险）,划分了金融、电商、社交等15种业务场景，31种攻击工具与手法，同时也对31种风险规避与缓解手段进行了介绍与风险对应，方便攻防双方参照此来开展红蓝对抗工作。
+To address the first issue, we open-sourced the "JDARMY RTASS Red-Blue Confrontation Scoring Framework" ([RTASS.JD.ARMY](https://rtass.jd.army)) in July this year. Following the CVSS scoring model, it can evaluate the effective output of both red and blue teams in a single exercise through a questionnaire format, while measuring the security level of enterprises and businesses. After back-to-back scoring on the system following practical attack-defense exercises, our red and blue teams achieved largely consistent scores that were recognized by both sides, demonstrating the framework's objective evaluation capability and largely solving the first aspect of blue team work.
 
-最近几年勒索病毒、数据泄露事件层出不穷，国际国内均纷纷立法加强对数据的管控力度。数据安全上升到了前所未有的高度，对数据面临威胁的模拟将成为蓝军的一项重要的工作职责与使命，组建“数据蓝军”将成为大势所趋。数据蓝军将通过模拟黑客、黑灰产、内鬼、供应链、第三方以及监管单位在数据安全领域能够给企业造成的威胁与风险，最终有效评估企业目前面临的数据安全短板。但这项工作要如何来开展呢？这也正是我们本次向社区开源“JDARMY DSRE数据安全风险枚举”（[DSRE.JD.ARMY]()）知识框架的初衷。也希望借BREAK框架和DSRE框架来解决蓝军的第二方面问题。
+Regarding the second issue, we believe that traditional blue teams focus solely on network security attack-defense, unable to comprehensively assess and simulate the various threats enterprises face in information security. For example, traditional blue teams essentially simulate hackers, which we call "network blue teams," but lack the capability to simulate black/gray markets, insiders, supply chains, third-party partners, and regulators.
 
-## 框架构建思路与方法
+Black/gray markets generally correspond to business security issues. Simulating black/gray markets is what we call "business blue teams." Business blue teams are fundamentally different from network blue teams - we can no longer rely on network security thinking and methodologies like CYBER KILLCHAIN, MITRE ATT&CK, or OWASP TOP 10. To this end, we open-sourced the "JDARMY BREAK Business Risk Enumeration and Avoidance Knowledge Framework" ([BREAK.JD.ARMY](https://break.jd.army)) in November. Following the MITRE ATT&CK model, it enumerates 80 risks (including 24 sub-risks) across different dimensions such as business, content, identity, and confrontation, categorizes 15 business scenarios including finance, e-commerce, and social networking, and introduces 31 attack tools and techniques, along with 31 risk avoidance and mitigation measures with corresponding risks, facilitating red-blue confrontation work for both offensive and defensive teams.
 
-在BREAK业务风险枚举与规避知识框架中，我们其实是采取的先枚举再归类的方法，这是由于业务的复杂性和多场景导致的。而在DSRE数据安全风险枚举框架中，我们则采取了先归类再枚举的构建思路，这是由于数据本身既是原子的，又具备流向性的缘故。因为数据是原子的，我们可以更好地罗列其属性；又因为数据具备流向性，我们也很容易归纳其周期。
+In recent years, ransomware and data breach incidents have been occurring frequently, with both international and domestic legislation strengthening data control. Data security has risen to unprecedented importance, and simulating threats to data will become an important responsibility and mission of blue teams. Establishing "data blue teams" will become an inevitable trend. Data blue teams will simulate the threats and risks that hackers, black/gray markets, insiders, supply chains, third parties, and regulatory units can pose to enterprises in the data security domain, ultimately effectively assessing the current data security shortcomings enterprises face. But how should this work be carried out? This is precisely the original intention behind our open-sourcing of the "JDARMY DSRE Data Security Risk Enumeration" ([DSRE.JD.ARMY](https://dsre.jd.army)) knowledge framework to the community. We also hope to use the BREAK and DSRE frameworks to solve the second aspect of blue team issues.
 
-针对数据属性，我们结合了业内成熟的理论：安全三项基本要素CIA，安全三项基本功能AAA，形成针对数据安全要求的6大维度。三要素即：保密性（Confidentiality）、完整性（Integrity）、可用性（Availability）；三功能即：认证（Authentication）、授权（Authorization）、审计（Accounting）。这6个维度对应的安全威胁分别是：泄露、篡改、拒绝服务、仿冒、权限滥用和抵赖。
+## Framework Construction Approach and Methodology
 
-针对数据周期，我们则直接搬用数据安全全生命周期：数据采集、数据传输、数据存储、数据处理、数据交换、数据销毁，这6个阶段。
+In the BREAK Business Risk Enumeration and Avoidance Knowledge Framework, we actually adopted an enumerate-first-then-categorize approach, due to the complexity and multi-scenario nature of business. In the DSRE Data Security Risk Enumeration Framework, we adopted a categorize-first-then-enumerate construction approach, due to data being both atomic and having flow characteristics. Because data is atomic, we can better enumerate its attributes; and because data has flow characteristics, we can easily summarize its lifecycle.
 
-最终以数据属性（威胁）为横轴、数据周期为纵轴，通过交叉枚举，形成了我们的数据安全风险枚举知识框架。
+For data attributes, we combined mature industry theories: the three basic security elements CIA and the three basic security functions AAA, forming six major dimensions for data security requirements. The three elements are: Confidentiality, Integrity, and Availability; the three functions are: Authentication, Authorization, and Accounting (Auditability). The security threats corresponding to these six dimensions are: disclosure, tampering, denial of service, spoofing, privilege abuse, and repudiation.
 
-## 按风险分类开展数据安全红蓝对抗工作
+For the data lifecycle, we directly adopted the complete data security lifecycle: data collection, data transmission, data storage, data processing, data exchange, and data destruction - these six stages.
 
-通过全面枚举数据在不同阶段面临的不同问题，在目前的版本（v0.2.0）中，我们共总结出112项风险隐患。不过因为风险维度比较繁杂，如果笼统地拿出来，是很难开展对抗实施的。为此，我们按照问题的发生域，又将风险分为：合规、功能、漏洞、对抗、隐患、规范与AI安全7大类。
+Finally, using data attributes (threats) as the horizontal axis and data lifecycle as the vertical axis, through cross-enumeration, we formed our data security risk enumeration knowledge framework.
 
-- 合规风险：指因不符合由国家监管单位、职能部门及组织下发的相关数据安全法律法规要求导致的风险，目前有17个。
+## Conducting Data Security Red-Blue Confrontation by Risk Category
 
-- 功能性风险：指由数据系统实现过程中的功能BUG导致的一类风险，共12个。
+Through comprehensive enumeration of different issues data faces at different stages, in the current version (v0.3.0), we have summarized 112 risk items. However, because the risk dimensions are quite complex, it would be difficult to implement confrontation if taken as a whole. Therefore, we categorized risks into seven major categories based on their occurrence domain: Compliance, Functional, Vulnerability, Confrontational, Weakness, Norms, and AI Security.
 
-- 漏洞风险：指可能被攻击者发现并利用造成一定数据安全影响的风险，共29个。
+- **Compliance Risks**: Risks arising from non-compliance with data security laws and regulations issued by national regulatory units, functional departments, and organizations. Currently 18 items.
 
-- 对抗性风险：指存在一定的对抗阶段，需要持续不断进行能力提升的一类风险，共12个。
+- **Functional Risks**: Risks caused by functional bugs in the data system implementation process. 12 items.
 
-- 隐患类风险：指不会直接被攻击者利用，但与某些漏洞相结合或在某些特定场景下有可能出问题的风险，共12个。
+- **Vulnerability Risks**: Risks that may be discovered and exploited by attackers to cause certain data security impacts. 29 items.
 
-- 规范类风险：指因不符合除”合规”外的应该具备及被遵守的相关数据安全规范导致的风险，共21个。
+- **Confrontational Risks**: Risks that involve certain confrontation stages and require continuous capability improvement. 12 items.
 
-- AI安全风险：指因引入人工智能、大语言模型（LLM）、机器学习等技术而产生的数据安全风险，共9个。
+- **Weakness Risks**: Risks that won't be directly exploited by attackers but may cause problems when combined with certain vulnerabilities or in specific scenarios. 12 items.
 
-将安全风险分类后，各安全团队可以结合自身在数据安全风险评估上的能力储备和工作意愿来决定开展哪些工作，即：复用现有的安全能力。譬如：网络蓝军可以选择”漏洞”与”对抗”的分类来开展红蓝对抗工作；”合规”和”规范”分类可以由安全规范与治理团队来开展；”功能”和”隐患”分类可以由安全运营与测试团队来开展；”AI安全”分类可以由AI安全团队或数据安全团队来开展。
+- **Norms Risks**: Risks arising from non-compliance with data security norms that should be possessed and followed, excluding "compliance." 21 items.
 
-## 构建完整的企业对抗评估体系
+- **AI Security Risks**: Data security risks arising from the introduction of artificial intelligence, large language models (LLM), machine learning, and other technologies. 8 items.
 
-通过网络蓝军、业务蓝军、数据蓝军相结合，可以比较全面地覆盖企业面临的各种信息安全风险场景，架构起完整的“以攻促防”蓝军对抗评估体系。而RTASS([https://github.com/JDArmy/RTASS]())、BREAK([https://github.com/JDArmy/BREAK]())、DSRE([https://github.com/JDArmy/DSRE]())三个框架可以分别为蓝军三种工作场景提供有力支撑，方便我们更好地开展相关工作。当然“一家之言”总有不足，我们从不敢奢望能代表整个行业，所以我们将三个框架开源，也是希望寄托于开源社区反哺框架本身，使之成为一个更客观、准确、全面的蓝军作战体系。
+After categorizing security risks, security teams can decide which work to undertake based on their capability reserves and work intentions in data security risk assessment, i.e., reusing existing security capabilities. For example: network blue teams can choose "vulnerability" and "confrontational" categories for red-blue confrontation work; "compliance" and "norms" categories can be undertaken by security governance teams; "functional" and "weakness" categories can be undertaken by security operations and testing teams; "AI security" category can be undertaken by AI security teams or data security teams.
 
-## 协作 & 贡献
+## Building a Complete Enterprise Confrontation Assessment System
 
-与RTASS、BREAK框架一样，DSRE框架采用JSON格式进行了系统描述，详见”/src/DSRE”文件夹，其中：风险项放于”risks.json”中。各协作者可以通过直接修改该文件来与我们进行该系统框架的协作开发，亦可通过在github上提issue来给我们提供意见或建议。
+By combining network blue teams, business blue teams, and data blue teams, we can comprehensively cover various information security risk scenarios enterprises face, constructing a complete "offense-driven defense" blue team confrontation assessment system. The three frameworks RTASS ([https://github.com/JDArmy/RTASS](https://github.com/JDArmy/RTASS)), BREAK ([https://github.com/JDArmy/BREAK](https://github.com/JDArmy/BREAK)), and DSRE ([https://github.com/JDArmy/DSRE](https://github.com/JDArmy/DSRE)) can respectively provide strong support for the three blue team work scenarios, facilitating better execution of related work. Of course, "one family's opinion" always has shortcomings. We never dare to presume to represent the entire industry, so we open-source these three frameworks, hoping that the open-source community will give back to the frameworks themselves, making them more objective, accurate, and comprehensive blue team operational systems.
 
-## 版本更新日志
+## Collaboration & Contribution
 
-### v0.2.0 (2026-03)
-- **新增AI安全风险类别**：新增9项AI/LLM相关数据安全风险（R0096-R0104），涵盖训练数据投毒、模型逆向攻击、提示词注入、RAG知识库泄露、AI智能体越权等
-- **填充空白风险**：完善了6个空白风险条目（R0064、R0065、R0071、R0072、R0082、R0084）
-- **新增云原生与供应链风险**：新增云存储配置错误、容器镜像敏感数据泄露、开源组件漏洞、第三方SDK违规采集等风险（R0105-R0108）
-- **新增API安全风险**：新增API数据聚合攻击、影子API数据泄露等风险（R0111-R0112）
-- **更新合规风险**：新增数据出境安全评估、数据分类分级等2024年新法规要求（R0109-R0110）
-- **新增安全实现手段**：新增隐私计算、零信任架构、AI安全防护、数据血缘追踪等4项防护手段
-- **技术栈升级**：升级至 Vue 3.5、Vite 6、TypeScript 5.7、Element Plus 2.9 等最新版本
-- **修复问题**：修正 Spoofing 拼写错误（原为 Snoofing）
-- **风险总数**：从95项增加至112项
+Like the RTASS and BREAK frameworks, the DSRE framework is systematically described in JSON format. See the "/src/DSRE" folder, where risk items are placed in "risks.json." Collaborators can cooperate with us in the collaborative development of this system framework by directly modifying this file, or provide opinions or suggestions by submitting issues on GitHub.
+
+## Version Update Log
+
+### v0.3.0 (2026-03)
+- **Added AI Security Risk Category**: Added 8 AI/LLM-related data security risks (R0096-R0103), covering training data poisoning, model reverse attacks, prompt injection, RAG knowledge base leakage, AI agent privilege escalation, etc.
+- **Filled Blank Risks**: Completed 6 blank risk items (R0064, R0065, R0071, R0072, R0082, R0084)
+- **Added Cloud Native & Supply Chain Risks**: Added cloud storage misconfiguration, container image sensitive data leakage, open-source component vulnerabilities, third-party SDK unauthorized collection, etc. (R0104-R0108)
+- **Added API Security Risks**: Added API data aggregation attacks, shadow API data leakage, etc. (R0111-R0112)
+- **Updated Compliance Risks**: Added data cross-border security assessment, data classification and grading, and other 2024 new regulatory requirements (R0109-R0110)
+- **Added Security Implementation Measures**: Added 4 protection measures including privacy computing, zero trust architecture, AI security protection, and data lineage tracking (total 36 measures)
+- **Added Security Implements Mapping**: Each risk now has precise one-to-many mapping with security implementation measures (average 2.16 measures per risk, total 242 mappings)
+- **Enhanced UI Features**: Added lifecycle sub-stage tooltips, last updated timestamp display, and improved visual design
+- **Technology Stack Upgrade**: Upgraded to Vue 3.5, Vite 6, TypeScript 5.7, Element Plus 2.9, and other latest versions
+- **Fixed Issues**: Corrected Spoofing spelling error (was Snoofing)
+- **Total Risks**: Increased from 95 to 112 items (18 Compliance, 12 Functional, 29 Vulnerability, 12 Confrontational, 12 Weakness, 21 Norms, 8 AI Security)
+
+### v0.2.0 (2023-12)
+- Initial public release with comprehensive risk enumeration
 
 ### v0.1.4 (2023-06)
-- 常规优化
+- General optimizations
 
 ### v0.1.3
-- 修复移动端表格序列化问题
+- Fixed mobile table serialization issues
 
 ### v0.1.2
-- 新增威胁详细描述和示例
+- Added detailed threat descriptions and examples
 
 ### v0.1.1
-- 初始版本发布
+- Initial version release
 
-## 感谢
+## Acknowledgments
 
+We would like to thank all contributors and the open-source community for their support and feedback.
+
+## License
+
+Apache 2.0

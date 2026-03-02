@@ -28,5 +28,6 @@
     "lifeCycles": "生命周期"
   },
   "securityControls": "防护手段",
-  "threats": "威胁"
+  "threats": "威胁",
+  "lastUpdated": "最后更新"
 }

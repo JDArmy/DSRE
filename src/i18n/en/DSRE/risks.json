@@ -2,561 +2,1027 @@
   "R0001": {
     "title": "Collecting Sensitive Information Before Authorization",
     "description": "According to national laws and regulations, sensitive information must only be collected after user authorization. Collecting sensitive information before user authorization poses compliance risk.",
-    "category": "Compliance"
+    "category": "Compliance",
+    "securityImplements": [
+      "DataEncryption",
+      "DataDesensitization",
+      "AccessControl"
+    ]
   },
   "R0002": {
     "title": "Collecting Sensitive Information Too Frequently",
     "description": "According to national laws and regulations, even with user authorization to collect certain sensitive information such as GPS location, it should not be done too frequently. Excessive frequency poses compliance risk.",
-    "category": "Compliance"
+    "category": "Compliance",
+    "securityImplements": [
+      "DataEncryption",
+      "DataDesensitization",
+      "AccessControl"
+    ]
   },
   "R0003": {
     "title": "Collecting Unnecessary Sensitive Information",
     "description": "According to national laws and regulations, collecting or recording user sensitive information should follow the principle of necessity. If not required by business needs and the necessity cannot be justified, it poses compliance risk.",
-    "category": "Compliance"
+    "category": "Compliance",
+    "securityImplements": [
+      "DataEncryption",
+      "DataDesensitization"
+    ]
   },
   "R0004": {
     "title": "Information Prohibited by Laws and Regulations",
     "description": "According to national laws and regulations, collecting information such as unique device IDs is prohibited. Collecting such information poses compliance risk.",
-    "category": "Compliance"
+    "category": "Compliance",
+    "securityImplements": [
+      "EndpointSecurity"
+    ]
   },
   "R0005": {
     "title": "Forging Collected/Recorded Data",
     "description": "Forging data collected by the terminal, such as device fingerprints; or forging data recorded by users, such as user IDs, ID numbers, prices, quantities, etc.",
-    "category": "Confrontational"
+    "category": "Confrontational",
+    "securityImplements": [
+      "IntegrityVerification"
+    ]
   },
   "R0006": {
     "title": "Incomplete Data Collection",
     "description": "For example, due to terminal permission restrictions, only partial information can be collected, or distorted/incorrect information is collected. This may cause security policies that heavily rely on terminal device information collection to fail, such as device fingerprint identification.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "IntegrityVerification"
+    ]
   },
   "R0007": {
     "title": "Dirty Data",
     "description": "Collection interfaces receive garbage, useless, out-of-range, or interfering data, resulting in incomplete final data collection.",
-    "category": "Functional"
+    "category": "Functional",
+    "securityImplements": [
+      "IntegrityVerification"
+    ]
   },
   "R0008": {
     "title": "Collection Logic Causing Program Crash",
     "description": "For example, extremely large numbers or logic issues causing terminal crashes or application paralysis.",
-    "category": "Functional"
+    "category": "Functional",
+    "securityImplements": [
+      "DisasterRecoveryBackup",
+      "LoadBalancing"
+    ]
   },
   "R0009": {
     "title": "Infinite Loop from Recursive Collection",
     "description": "Infinite loop collection caused by collection code not considering recursion issues. For example, directory symbolic links pointing to parent directories causing infinite loops when collecting directory structures.",
-    "category": "Functional"
+    "category": "Functional",
+    "securityImplements": [
+      "DisasterRecoveryBackup",
+      "LoadBalancing"
+    ]
   },
   "R0010": {
     "title": "Identity Impersonation or Forgery",
     "description": "Using someone else's ID number or personal information for impersonation during data recording, or using someone else's access ID during data submission.",
-    "category": "Confrontational"
+    "category": "Confrontational",
+    "securityImplements": [
+      "IdentityManagement"
+    ]
   },
   "R0011": {
     "title": "No Authentication or Authentication Failure",
     "description": "Failure to authenticate the identity of information collectors, or authentication methods being ineffective. For example, over-reliance on plaintext user IDs during information collection, leading to overwriting others' information.",
-    "category": "Vulnerability"
+    "category": "Vulnerability",
+    "securityImplements": [
+      "MultipleFactorAuthentication",
+      "PasswordAuthentication",
+      "CertificateAuthentication",
+      "IdentityManagement"
+    ]
   },
   "R0012": {
     "title": "Excessive Terminal Permission Requests/Grants",
     "description": "According to national laws and regulations, requesting terminal permissions must follow the principle of necessity. Excessive permission requests are not allowed, such as unreasonably requesting SMS reading or contact list reading permissions, or forcing users to grant permissions to use the app.",
-    "category": "Compliance"
+    "category": "Compliance",
+    "securityImplements": [
+      "PermissionMinimization",
+      "AuthorityManagement"
+    ]
   },
   "R0013": {
     "title": "Collection Data Correlation Failure",
     "description": "Collected data lacks effective ownership and correlation relationships, making data traceability impossible. For example, during contact list collection, only mutual correspondence is recorded without recording individual data sources, causing pollution when forged data is collected and making it impossible to trace the pollution source.",
-    "category": "Functional"
+    "category": "Functional",
+    "securityImplements": [
+      "BlockchainDataProtection",
+      "SecurityAudit",
+      "DataLineageTracking"
+    ]
   },
   "R0014": {
     "title": "Unencrypted Transmission of Sensitive Information",
     "description": "According to national laws and regulations, user sensitive personal information collected from terminals must be transmitted using encryption. Unencrypted transmission poses compliance risk.",
-    "category": "Compliance"
+    "category": "Compliance",
+    "securityImplements": [
+      "DataEncryption",
+      "DataDesensitization",
+      "KeyManagement",
+      "EndpointSecurity"
+    ]
   },
   "R0015": {
     "title": "Unencrypted Data Transmission Channel",
     "description": "Data transmitted in plaintext, such as HTTP, FTP, POP, SMTP. Strong encryption protocols such as HTTPS, SFTP, POPS, SMTPS should be used for data transmission.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "DataEncryption",
+      "KeyManagement"
+    ]
   },
   "R0016": {
     "title": "Weak Encryption Protocols/Algorithms",
     "description": "For example, using RSA key pairs smaller than 512 bits in HTTPS protocol, or using weak collision-prone encryption algorithms like MD5 for data signatures.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "DataEncryption",
+      "KeyManagement"
+    ]
   },
   "R0017": {
     "title": "Hardcoded Encryption Keys",
     "description": "Encryption keys hardcoded in programs, making them easily obtainable by attackers through reverse engineering or decompilation, rendering encryption ineffective.",
-    "category": "Weakness"
+    "category": "Weakness",
+    "securityImplements": [
+      "DataEncryption",
+      "DataClassification",
+      "AccessControl"
+    ]
   },
   "R0018": {
     "title": "Transmission Data Tampering",
     "description": "Data transmitted over the network is tampered with by man-in-the-middle attacks or other means, such as modifying prices, quantities, or other critical business data.",
-    "category": "Confrontational"
+    "category": "Confrontational",
+    "securityImplements": [
+      "DataEncryption",
+      "KeyManagement"
+    ]
   },
   "R0019": {
     "title": "Transmission Data Replay",
     "description": "Attackers capture legitimate data packets and replay them to the server to achieve malicious purposes, such as repeatedly submitting orders or payment requests.",
-    "category": "Confrontational"
+    "category": "Confrontational",
+    "securityImplements": [
+      "IntegrityVerification"
+    ]
   },
   "R0020": {
     "title": "Data Transmission Interruption",
     "description": "Data transmission is interrupted due to network issues, program crashes, or other reasons, resulting in incomplete data transmission or data loss.",
-    "category": "Functional"
+    "category": "Functional",
+    "securityImplements": [
+      "IntegrityVerification"
+    ]
   },
   "R0021": {
     "title": "Data Transmission Timeout",
     "description": "Data transmission times out due to network latency, server overload, or other reasons, causing data transmission failure or business process interruption.",
-    "category": "Functional"
+    "category": "Functional",
+    "securityImplements": [
+      "IntegrityVerification"
+    ]
   },
   "R0022": {
     "title": "Data Transmission Congestion",
     "description": "Network congestion or server overload causes data transmission delays or failures, affecting business continuity and user experience.",
-    "category": "Functional"
+    "category": "Functional",
+    "securityImplements": [
+      "IntegrityVerification"
+    ]
   },
   "R0023": {
     "title": "Data Transmission Packet Loss",
     "description": "Data packets are lost during network transmission, resulting in incomplete data reception or requiring retransmission, affecting transmission efficiency and data integrity.",
-    "category": "Functional"
+    "category": "Functional",
+    "securityImplements": [
+      "DisasterRecoveryBackup",
+      "LoadBalancing"
+    ]
   },
   "R0024": {
     "title": "Data Transmission Order Disruption",
     "description": "Data packets arrive out of order during network transmission, requiring reordering at the receiving end, which may cause data processing errors or business logic issues.",
-    "category": "Functional"
+    "category": "Functional",
+    "securityImplements": [
+      "DDoSDefense"
+    ]
   },
   "R0025": {
     "title": "Sensitive Information Not Encrypted in Storage",
     "description": "According to national laws and regulations, user sensitive personal information must be stored in encrypted form. Unencrypted storage poses compliance risk.",
-    "category": "Compliance"
+    "category": "Compliance",
+    "securityImplements": [
+      "PasswordAuthentication",
+      "CertificateAuthentication",
+      "MultipleFactorAuthentication"
+    ]
   },
   "R0026": {
     "title": "Weak Storage Encryption Algorithms",
     "description": "Using weak encryption algorithms for data storage, such as DES, MD5, etc., which can be easily cracked by attackers, resulting in data leakage.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "PermissionMinimization"
+    ]
   },
   "R0027": {
     "title": "Storage Encryption Keys Not Properly Protected",
     "description": "Storage encryption keys are not properly protected, such as being stored in plaintext, hardcoded in programs, or having overly broad access permissions, making them easily obtainable by attackers.",
-    "category": "Weakness"
+    "category": "Weakness",
+    "securityImplements": [
+      "DatabaseAudit",
+      "SecurityAudit"
+    ]
   },
   "R0028": {
     "title": "Sensitive Data Not Masked in Storage",
     "description": "Sensitive data such as ID numbers, bank card numbers, phone numbers, etc., are stored in plaintext without masking or desensitization, posing data leakage risk.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "DataEncryption",
+      "DataDesensitization",
+      "KeyManagement"
+    ]
   },
   "R0029": {
     "title": "Sensitive Data Not Isolated in Storage",
     "description": "Sensitive data and non-sensitive data are stored together without isolation measures, increasing the risk of sensitive data leakage.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "DataEncryption",
+      "KeyManagement"
+    ]
   },
   "R0030": {
     "title": "Storage Data Not Backed Up",
     "description": "Important data is not backed up regularly. Once data is lost or damaged, it cannot be recovered, affecting business continuity.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "AccessControl"
+    ]
   },
   "R0031": {
     "title": "Storage Backup Data Not Encrypted",
     "description": "Backup data is not encrypted. If backup media is lost or stolen, it may lead to data leakage.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "DataEncryption",
+      "DataClassification",
+      "AccessControl"
+    ]
   },
   "R0032": {
     "title": "Storage Backup Data Not Verified",
     "description": "Backup data integrity and recoverability are not verified regularly. Backup data may be damaged or unrecoverable, failing to serve its backup purpose.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "DataEncryption",
+      "DataClassification",
+      "AccessControl"
+    ]
   },
   "R0033": {
     "title": "Storage Data Not Cleaned Up Timely",
     "description": "Expired or unnecessary data is not cleaned up timely, wasting storage resources and increasing data leakage risk.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "AccessControl",
+      "DataLossPrevention"
+    ]
   },
   "R0034": {
     "title": "Storage Media Not Securely Destroyed",
     "description": "When storage media is discarded or repurposed, data is not securely erased, and residual data may be recovered by attackers.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "DisasterRecoveryBackup"
+    ]
   },
   "R0035": {
     "title": "Storage Access Control Not Strict",
     "description": "Storage system access control is not strict, with overly broad permissions or lack of permission auditing, making it easy for unauthorized personnel to access sensitive data.",
-    "category": "Weakness"
+    "category": "Weakness",
+    "securityImplements": [
+      "DatabaseAudit"
+    ]
   },
   "R0036": {
     "title": "Storage System Vulnerabilities",
     "description": "Storage systems have security vulnerabilities that can be exploited by attackers to access, tamper with, or delete data.",
-    "category": "Vulnerability"
+    "category": "Vulnerability",
+    "securityImplements": [
+      "DatabaseAudit"
+    ]
   },
   "R0037": {
     "title": "Storage System Configuration Errors",
     "description": "Storage system configuration errors, such as default passwords, open ports, or overly broad permissions, create security vulnerabilities.",
-    "category": "Weakness"
+    "category": "Weakness",
+    "securityImplements": [
+      "IntegrityVerification"
+    ]
   },
   "R0038": {
     "title": "Storage System Logs Not Enabled",
     "description": "Storage system access logs are not enabled or not retained for sufficient time, making it impossible to trace data access and operation records.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "DisasterRecoveryBackup"
+    ]
   },
   "R0039": {
     "title": "Storage System Logs Not Monitored",
     "description": "Storage system logs are not monitored and analyzed in real-time, making it impossible to detect abnormal access or operations timely.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "DisasterRecoveryBackup",
+      "LoadBalancing"
+    ]
   },
   "R0040": {
     "title": "Data Processing Without Authorization",
     "description": "Processing user data without user authorization or beyond the authorized scope, violating user privacy rights and posing compliance risk.",
-    "category": "Compliance"
+    "category": "Compliance",
+    "securityImplements": [
+      "DisasterRecoveryBackup"
+    ]
   },
   "R0041": {
     "title": "Data Processing Purpose Change",
     "description": "Changing the purpose of data processing without re-obtaining user authorization, violating the principle of purpose limitation and posing compliance risk.",
-    "category": "Compliance"
+    "category": "Compliance",
+    "securityImplements": [
+      "MultipleFactorAuthentication",
+      "PasswordAuthentication",
+      "CertificateAuthentication",
+      "IdentityManagement"
+    ]
   },
   "R0042": {
     "title": "Data Processing Exceeding Necessary Scope",
     "description": "Data processing exceeds the necessary scope for business purposes, violating the principle of data minimization and posing compliance risk.",
-    "category": "Compliance"
+    "category": "Compliance",
+    "securityImplements": [
+      "PasswordAuthentication",
+      "IdentityManagement"
+    ]
   },
   "R0043": {
     "title": "Data Processing Causing Discrimination",
     "description": "Data processing algorithms or models cause discriminatory results, such as discrimination based on race, gender, age, etc., violating fairness principles and posing compliance risk.",
-    "category": "Compliance"
+    "category": "Compliance",
+    "securityImplements": [
+      "PasswordAuthentication",
+      "IdentityManagement"
+    ]
   },
   "R0044": {
     "title": "Data Processing Lacking Transparency",
     "description": "Data processing logic and algorithms lack transparency, making it impossible for users to understand how their data is processed, violating the principle of transparency.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "PasswordAuthentication",
+      "CertificateAuthentication",
+      "MultipleFactorAuthentication"
+    ]
   },
   "R0045": {
     "title": "Data Processing Results Not Explainable",
     "description": "Automated decision-making results based on data processing cannot be explained, making it impossible for users to understand the basis for decisions, violating the principle of explainability.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "PasswordAuthentication",
+      "IdentityManagement"
+    ]
   },
   "R0046": {
     "title": "Data Processing Errors",
     "description": "Errors in data processing logic or algorithms lead to incorrect processing results, affecting business decisions and user rights.",
-    "category": "Functional"
+    "category": "Functional",
+    "securityImplements": [
+      "PermissionMinimization"
+    ]
   },
   "R0047": {
     "title": "Data Processing Performance Issues",
     "description": "Data processing performance is insufficient, causing processing delays or failures, affecting business continuity and user experience.",
-    "category": "Functional"
+    "category": "Functional",
+    "securityImplements": [
+      "PermissionMinimization",
+      "AuthorityManagement"
+    ]
   },
   "R0048": {
     "title": "Data Processing Resource Exhaustion",
     "description": "Data processing consumes excessive system resources, causing system overload or crashes, affecting business continuity.",
-    "category": "Functional"
+    "category": "Functional",
+    "securityImplements": [
+      "PermissionMinimization",
+      "AuthorityManagement"
+    ]
   },
   "R0049": {
     "title": "Data Processing Concurrency Issues",
     "description": "Concurrent data processing causes data inconsistency or processing errors, affecting data integrity and business correctness.",
-    "category": "Functional"
+    "category": "Functional",
+    "securityImplements": [
+      "DatabaseAudit",
+      "SecurityAudit"
+    ]
   },
   "R0050": {
     "title": "Data Processing Transaction Issues",
     "description": "Data processing lacks transaction management, causing data inconsistency or partial updates when processing fails, affecting data integrity.",
-    "category": "Functional"
+    "category": "Functional",
+    "securityImplements": [
+      "DatabaseAudit",
+      "SecurityAudit"
+    ]
   },
   "R0051": {
     "title": "Data Sharing Without Authorization",
     "description": "Sharing user data with third parties without user authorization or beyond the authorized scope, violating user privacy rights and posing compliance risk.",
-    "category": "Compliance"
+    "category": "Compliance",
+    "securityImplements": [
+      "BlockchainDataProtection",
+      "DatabaseAudit",
+      "SecurityAudit",
+      "DataLineageTracking"
+    ]
   },
   "R0052": {
     "title": "Data Sharing Purpose Unclear",
     "description": "The purpose of data sharing is unclear or not clearly informed to users, violating the principle of transparency and posing compliance risk.",
-    "category": "Compliance"
+    "category": "Compliance",
+    "securityImplements": [
+      "SecurityAudit",
+      "SecurityMonitoring"
+    ]
   },
   "R0053": {
     "title": "Data Sharing Scope Too Broad",
     "description": "Data sharing scope exceeds necessary range, sharing more data than required, violating the principle of data minimization and posing compliance risk.",
-    "category": "Compliance"
+    "category": "Compliance",
+    "securityImplements": [
+      "DataDesensitization",
+      "PrivacyComputing",
+      "Tokenization",
+      "DataMasking",
+      "DataLossPrevention",
+      "DataEncryption"
+    ]
   },
   "R0054": {
     "title": "Data Sharing Third Party Not Qualified",
     "description": "Data sharing third parties lack necessary security capabilities or compliance qualifications, posing data leakage risk.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "DataLossPrevention"
+    ]
   },
   "R0055": {
     "title": "Data Sharing Agreement Not Signed",
     "description": "No data sharing agreement is signed with third parties, or the agreement does not clearly define data security responsibilities, making it difficult to hold parties accountable when data leakage occurs.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "DataEncryption",
+      "DataDesensitization",
+      "Tokenization",
+      "DataMasking"
+    ]
   },
   "R0056": {
     "title": "Data Sharing Not Monitored",
     "description": "Data sharing behavior is not monitored and audited, making it impossible to detect abnormal sharing or data leakage timely.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "DataEncryption",
+      "DataClassification",
+      "AccessControl"
+    ]
   },
   "R0057": {
     "title": "Data Sharing Not Encrypted",
     "description": "Data is not encrypted during sharing, posing data leakage risk during transmission or storage.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "DataEncryption",
+      "DataClassification",
+      "AccessControl"
+    ]
   },
   "R0058": {
     "title": "Data Sharing Not Desensitized",
     "description": "Sensitive data is not desensitized during sharing, directly sharing original data, posing data leakage risk.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "DataEncryption",
+      "DataClassification",
+      "AccessControl"
+    ]
   },
   "R0059": {
     "title": "Data Sharing Not Time-Limited",
     "description": "Data sharing is not time-limited, allowing third parties to use data indefinitely, increasing data leakage risk.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "AccessControl"
+    ]
   },
   "R0060": {
     "title": "Data Sharing Not Revocable",
     "description": "Data sharing cannot be revoked, making it impossible to stop third parties from using data when users withdraw authorization or data is no longer needed.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "IntegrityVerification"
+    ]
   },
   "R0061": {
     "title": "Data Disclosure Without Authorization",
     "description": "Publicly disclosing user data without user authorization or beyond the authorized scope, violating user privacy rights and posing compliance risk.",
-    "category": "Compliance"
+    "category": "Compliance",
+    "securityImplements": [
+      "AccessControl"
+    ]
   },
   "R0062": {
     "title": "Data Disclosure Scope Too Broad",
     "description": "Data disclosure scope exceeds necessary range, disclosing more data than required, violating the principle of data minimization and posing compliance risk.",
-    "category": "Compliance"
+    "category": "Compliance",
+    "securityImplements": [
+      "DataDesensitization"
+    ]
   },
   "R0063": {
     "title": "Data Disclosure Not Desensitized",
     "description": "Sensitive data is not desensitized during disclosure, directly disclosing original data, posing data leakage risk.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "DDoSDefense"
+    ]
   },
   "R0064": {
     "title": "Data Disclosure Causing Privacy Leakage",
     "description": "Data disclosure causes user privacy leakage, such as disclosing user identity information, behavior data, etc., violating user privacy rights.",
-    "category": "Vulnerability"
+    "category": "Vulnerability",
+    "securityImplements": [
+      "DataLossPrevention"
+    ]
   },
   "R0065": {
     "title": "Data Disclosure Not Reviewed",
     "description": "Data disclosure is not reviewed and approved, lacking necessary security assessment, posing data leakage risk.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "IntegrityVerification"
+    ]
   },
   "R0066": {
     "title": "Data Disclosure Not Monitored",
     "description": "Data disclosure behavior is not monitored and audited, making it impossible to detect abnormal disclosure or data leakage timely.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "DDoSDefense"
+    ]
   },
   "R0067": {
     "title": "Data Deletion Not Timely",
     "description": "User data is not deleted timely after users request deletion or data retention period expires, violating user rights and posing compliance risk.",
-    "category": "Compliance"
+    "category": "Compliance",
+    "securityImplements": [
+      "PasswordAuthentication",
+      "CertificateAuthentication",
+      "MultipleFactorAuthentication"
+    ]
   },
   "R0068": {
     "title": "Data Deletion Not Complete",
     "description": "Data deletion is not complete, with residual data in backups, logs, or caches, posing data leakage risk.",
-    "category": "Weakness"
+    "category": "Weakness",
+    "securityImplements": [
+      "PermissionMinimization"
+    ]
   },
   "R0069": {
     "title": "Data Deletion Not Verifiable",
     "description": "Data deletion cannot be verified, making it impossible to confirm whether data has been completely deleted, affecting user trust.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "MultipleFactorAuthentication",
+      "PasswordAuthentication",
+      "CertificateAuthentication",
+      "IdentityManagement"
+    ]
   },
   "R0070": {
     "title": "Data Deletion Causing Business Impact",
     "description": "Data deletion causes business process interruption or data inconsistency, affecting business continuity.",
-    "category": "Functional"
+    "category": "Functional",
+    "securityImplements": [
+      "PasswordAuthentication",
+      "CertificateAuthentication",
+      "MultipleFactorAuthentication"
+    ]
   },
   "R0071": {
     "title": "Data Deletion Not Logged",
     "description": "Data deletion operations are not logged, making it impossible to trace deletion records and hold parties accountable.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "SessionManagement",
+      "IdentityManagement",
+      "PasswordAuthentication",
+      "CertificateAuthentication",
+      "MultipleFactorAuthentication"
+    ]
   },
   "R0072": {
     "title": "Data Export Without Authorization",
     "description": "Exporting user data without user authorization or beyond the authorized scope, violating user privacy rights and posing compliance risk.",
-    "category": "Compliance"
+    "category": "Compliance",
+    "securityImplements": [
+      "IntegrityVerification"
+    ]
   },
   "R0073": {
     "title": "Data Export Format Not Standardized",
     "description": "Data export format is not standardized, making it difficult for users to use exported data, affecting user experience.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "PermissionMinimization",
+      "AuthorityManagement"
+    ]
   },
   "R0074": {
     "title": "Data Export Not Encrypted",
     "description": "Exported data is not encrypted, posing data leakage risk during transmission or storage.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "DatabaseAudit",
+      "SecurityAudit"
+    ]
   },
   "R0075": {
     "title": "Data Export Not Desensitized",
     "description": "Sensitive data is not desensitized during export, directly exporting original data, posing data leakage risk.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "DatabaseAudit",
+      "SecurityAudit"
+    ]
   },
   "R0076": {
     "title": "Data Export Not Logged",
     "description": "Data export operations are not logged, making it impossible to trace export records and hold parties accountable.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "DataEncryption",
+      "DataDesensitization",
+      "Tokenization",
+      "DataMasking"
+    ]
   },
   "R0077": {
     "title": "Data Import Without Validation",
     "description": "Imported data is not validated, allowing malicious or erroneous data to enter the system, affecting data quality and system security.",
-    "category": "Weakness"
+    "category": "Weakness",
+    "securityImplements": [
+      "DataEncryption",
+      "DataDesensitization",
+      "Tokenization",
+      "DataMasking"
+    ]
   },
   "R0078": {
     "title": "Data Import Format Not Standardized",
     "description": "Data import format is not standardized, causing import failures or data errors, affecting business continuity.",
-    "category": "Functional"
+    "category": "Functional",
+    "securityImplements": [
+      "DataEncryption",
+      "DataClassification",
+      "AccessControl"
+    ]
   },
   "R0079": {
     "title": "Data Import Not Encrypted",
     "description": "Imported data is not encrypted, posing data leakage risk during transmission or storage.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "DataLossPrevention"
+    ]
   },
   "R0080": {
     "title": "Data Import Causing Data Pollution",
     "description": "Imported data contains errors or malicious content, polluting existing data and affecting data quality.",
-    "category": "Functional"
+    "category": "Functional",
+    "securityImplements": [
+      "IntegrityVerification"
+    ]
   },
   "R0081": {
     "title": "Data Import Not Logged",
     "description": "Data import operations are not logged, making it impossible to trace import records and hold parties accountable.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "IntegrityVerification"
+    ]
   },
   "R0082": {
     "title": "Data Access Without Authorization",
     "description": "Accessing user data without authorization or beyond the authorized scope, violating user privacy rights and posing compliance risk.",
-    "category": "Compliance"
+    "category": "Compliance",
+    "securityImplements": [
+      "AccessControl"
+    ]
   },
   "R0083": {
     "title": "Data Access Control Not Strict",
     "description": "Data access control is not strict, with overly broad permissions or lack of permission auditing, making it easy for unauthorized personnel to access sensitive data.",
-    "category": "Weakness"
+    "category": "Weakness",
+    "securityImplements": [
+      "DisasterRecoveryBackup",
+      "LoadBalancing"
+    ]
   },
   "R0084": {
     "title": "Data Access Not Logged",
     "description": "Data access operations are not logged, making it impossible to trace access records and hold parties accountable.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "AccessControl",
+      "DataLossPrevention"
+    ]
   },
   "R0085": {
     "title": "Data Access Logs Not Monitored",
     "description": "Data access logs are not monitored and analyzed in real-time, making it impossible to detect abnormal access or operations timely.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "MultipleFactorAuthentication",
+      "PasswordAuthentication",
+      "CertificateAuthentication",
+      "IdentityManagement"
+    ]
   },
   "R0086": {
     "title": "Data Access Logs Not Retained",
     "description": "Data access logs are not retained for sufficient time, making it impossible to trace historical access records.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "MultipleFactorAuthentication",
+      "PasswordAuthentication",
+      "CertificateAuthentication",
+      "IdentityManagement"
+    ]
   },
   "R0087": {
     "title": "SQL Injection",
     "description": "Applications do not properly validate user input, allowing attackers to inject malicious SQL code to access, tamper with, or delete database data.",
-    "category": "Vulnerability"
+    "category": "Vulnerability",
+    "securityImplements": [
+      "PermissionMinimization"
+    ]
   },
   "R0088": {
     "title": "NoSQL Injection",
     "description": "Applications do not properly validate user input, allowing attackers to inject malicious NoSQL query code to access, tamper with, or delete database data.",
-    "category": "Vulnerability"
+    "category": "Vulnerability",
+    "securityImplements": [
+      "PermissionMinimization",
+      "AuthorityManagement"
+    ]
   },
   "R0089": {
     "title": "Command Injection",
     "description": "Applications do not properly validate user input, allowing attackers to inject malicious system commands to execute arbitrary operations on the server.",
-    "category": "Vulnerability"
+    "category": "Vulnerability",
+    "securityImplements": [
+      "DatabaseAudit",
+      "SecurityAudit"
+    ]
   },
   "R0090": {
     "title": "Code Injection",
     "description": "Applications do not properly validate user input, allowing attackers to inject malicious code to execute arbitrary operations in the application.",
-    "category": "Vulnerability"
+    "category": "Vulnerability",
+    "securityImplements": [
+      "DataClassification"
+    ]
   },
   "R0091": {
     "title": "XML External Entity (XXE) Injection",
     "description": "Applications do not properly process XML input, allowing attackers to inject malicious external entities to read local files, perform SSRF attacks, or cause denial of service.",
-    "category": "Vulnerability"
+    "category": "Vulnerability",
+    "securityImplements": [
+      "IntegrityVerification"
+    ]
   },
   "R0092": {
     "title": "Cross-Site Scripting (XSS)",
     "description": "Applications do not properly validate user input, allowing attackers to inject malicious scripts into web pages to steal user information or perform malicious operations.",
-    "category": "Vulnerability"
+    "category": "Vulnerability",
+    "securityImplements": [
+      "DisasterRecoveryBackup",
+      "LoadBalancing"
+    ]
   },
   "R0093": {
     "title": "Cross-Site Request Forgery (CSRF)",
     "description": "Applications do not properly validate request sources, allowing attackers to forge user requests to perform unauthorized operations.",
-    "category": "Vulnerability"
+    "category": "Vulnerability",
+    "securityImplements": [
+      "MultipleFactorAuthentication",
+      "PasswordAuthentication",
+      "CertificateAuthentication",
+      "IdentityManagement"
+    ]
   },
   "R0094": {
     "title": "Server-Side Request Forgery (SSRF)",
     "description": "Applications do not properly validate user-provided URLs, allowing attackers to forge server-side requests to access internal network resources or perform port scanning.",
-    "category": "Vulnerability"
+    "category": "Vulnerability",
+    "securityImplements": [
+      "PermissionMinimization"
+    ]
   },
   "R0095": {
     "title": "Path Traversal",
     "description": "Applications do not properly validate file paths, allowing attackers to access files outside the intended directory through path traversal.",
-    "category": "Vulnerability"
+    "category": "Vulnerability",
+    "securityImplements": [
+      "DatabaseAudit",
+      "DataDestruction",
+      "SecurityAudit"
+    ]
   },
   "R0096": {
     "title": "File Upload Vulnerability",
     "description": "Applications do not properly validate uploaded files, allowing attackers to upload malicious files to execute arbitrary code or perform other attacks.",
-    "category": "Vulnerability"
+    "category": "Vulnerability",
+    "securityImplements": [
+      "IntegrityVerification"
+    ]
   },
   "R0097": {
     "title": "Insecure Deserialization",
     "description": "Applications do not properly validate deserialized data, allowing attackers to inject malicious objects to execute arbitrary code or perform other attacks.",
-    "category": "Vulnerability"
+    "category": "Vulnerability",
+    "securityImplements": [
+      "DataEncryption",
+      "DataDesensitization",
+      "AISecurityProtection"
+    ]
   },
   "R0098": {
     "title": "Broken Access Control",
     "description": "Applications do not properly implement access control, allowing attackers to access resources or perform operations beyond their authorization.",
-    "category": "Vulnerability"
+    "category": "Vulnerability",
+    "securityImplements": [
+      "DataEncryption",
+      "AccessControl",
+      "AISecurityProtection",
+      "DataLossPrevention"
+    ]
   },
   "R0099": {
     "title": "Sensitive Data Exposure",
     "description": "Applications expose sensitive data in error messages, logs, URLs, or other locations, allowing attackers to obtain sensitive information.",
-    "category": "Weakness"
+    "category": "Weakness",
+    "securityImplements": [
+      "DataEncryption",
+      "DataDesensitization",
+      "AISecurityProtection",
+      "DataLossPrevention"
+    ]
   },
   "R0100": {
     "title": "Security Misconfiguration",
     "description": "Applications or servers have security misconfigurations, such as default passwords, unnecessary services enabled, or overly detailed error messages, creating security vulnerabilities.",
-    "category": "Weakness"
+    "category": "Weakness",
+    "securityImplements": [
+      "AccessControl",
+      "AISecurityProtection",
+      "DataPartition",
+      "DataLossPrevention"
+    ]
   },
   "R0101": {
     "title": "Using Components with Known Vulnerabilities",
     "description": "Applications use third-party components with known security vulnerabilities, allowing attackers to exploit these vulnerabilities to attack the system.",
-    "category": "Vulnerability"
+    "category": "Vulnerability",
+    "securityImplements": [
+      "PermissionMinimization",
+      "AuthorityManagement"
+    ]
   },
   "R0102": {
     "title": "Insufficient Logging and Monitoring",
     "description": "Applications lack sufficient logging and monitoring, making it impossible to detect attacks or security incidents timely.",
-    "category": "Norms"
+    "category": "Norms",
+    "securityImplements": [
+      "DataEncryption",
+      "AISecurityProtection",
+      "DataLossPrevention"
+    ]
   },
   "R0103": {
     "title": "API Security Issues",
     "description": "APIs lack proper authentication, authorization, rate limiting, or input validation, allowing attackers to abuse APIs to access or tamper with data.",
-    "category": "Weakness"
+    "category": "Weakness",
+    "securityImplements": [
+      "DataDesensitization",
+      "Tokenization",
+      "DataMasking",
+      "DataLossPrevention",
+      "DataEncryption"
+    ]
   },
   "R0104": {
     "title": "Microservices Communication Security Issues",
     "description": "Communication between microservices lacks encryption or authentication, allowing attackers to eavesdrop on or tamper with inter-service communication data.",
-    "category": "Weakness"
+    "category": "Weakness",
+    "securityImplements": [
+      "DataDesensitization",
+      "AISecurityProtection"
+    ]
   },
   "R0105": {
     "title": "Container Security Issues",
     "description": "Container images contain vulnerabilities, or container runtime configurations are insecure, allowing attackers to escape containers or attack the host system.",
-    "category": "Vulnerability"
+    "category": "Vulnerability",
+    "securityImplements": [
+      "DataEncryption",
+      "DataDesensitization",
+      "EndpointSecurity",
+      "AccessControl"
+    ]
   },
   "R0106": {
     "title": "Open Source Components Introducing Data Leakage Risk",
     "description": "Open source components used by applications have known security vulnerabilities (such as Log4Shell), or contain malicious code (supply chain poisoning), allowing attackers to exploit these vulnerabilities to access sensitive data stored or processed in the system.",
-    "category": "Vulnerability"
+    "category": "Vulnerability",
+    "securityImplements": [
+      "DataLossPrevention"
+    ]
   },
   "R0107": {
     "title": "Cloud Storage Misconfiguration Causing Data Leakage",
     "description": "Cloud object storage (such as OSS, S3), cloud databases, or other cloud storage services have misconfigured access policies (such as being set to publicly readable or not enabling access control), causing stored sensitive data to be accessed and downloaded by anyone.",
-    "category": "Vulnerability"
+    "category": "Vulnerability",
+    "securityImplements": [
+      "AccessControl",
+      "DataLossPrevention"
+    ]
   },
   "R0108": {
     "title": "Container Image Sensitive Data Leakage",
     "description": "When building container images, developers hardcode or leave sensitive configuration information such as database connection strings, API keys, or certificate private keys in image layers, causing sensitive data to be exposed after the image is pulled.",
-    "category": "Weakness"
+    "category": "Weakness",
+    "securityImplements": [
+      "KeyManagement",
+      "DataLossPrevention"
+    ]
   },
   "R0109": {
     "title": "Failure to Perform Data Cross-Border Security Assessment",
     "description": "According to the Data Security Law, Personal Information Protection Law, and Measures for Data Cross-Border Security Assessment, when providing important data or personal information reaching a certain scale to overseas entities, security assessment organized by the national cyberspace administration must be passed. Failure to fulfill this assessment obligation poses compliance risk.",
-    "category": "Compliance"
+    "category": "Compliance",
+    "securityImplements": [
+      "DataDesensitization"
+    ]
   },
   "R0110": {
     "title": "Important Data Not Classified and Graded as Required",
     "description": "According to the Data Security Law and industry data security management regulations, enterprises should implement classified and graded management of data, and implement key protection for important data and core data. Failure to establish a data classification and grading system or failure to implement as required poses regulatory penalty risk.",
-    "category": "Compliance"
+    "category": "Compliance",
+    "securityImplements": [
+      "DataClassification"
+    ]
   },
   "R0111": {
     "title": "API Data Aggregation Attack",
     "description": "Attackers combine calls to multiple seemingly harmless API interfaces, correlating and aggregating fragmented data returned by each interface to ultimately reconstruct complete sensitive information (such as combining name + phone number + address from multiple interfaces to reconstruct complete user profiles), bypassing data desensitization protection of individual interfaces.",
-    "category": "Confrontational"
+    "category": "Confrontational",
+    "securityImplements": [
+      "DataEncryption",
+      "DataDesensitization",
+      "Tokenization",
+      "DataMasking"
+    ]
   },
   "R0112": {
     "title": "Shadow API Data Leakage",
     "description": "The system contains unrecorded and unmonitored shadow APIs, which may be legacy old version interfaces, test interfaces, or decommissioned interfaces that lack authentication and authorization protection, allowing attackers to directly access sensitive data through these interfaces.",
-    "category": "Vulnerability"
+    "category": "Vulnerability",
+    "securityImplements": [
+      "AccessControl",
+      "DataLossPrevention"
+    ]
   }
 }

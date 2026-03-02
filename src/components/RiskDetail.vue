@@ -12,17 +12,13 @@ const emit = defineEmits(["drawerClose", "showImplDrawer"]);
 const getCategory = () =>
   props.rKey ? DSRE.risks[props.rKey as keyof typeof DSRE.risks].category : "";
 
-// 获取该风险对应的安全属性和实现手段
+// 获取该风险对应的防护手段
 const getSecurityImplements = () => {
   if (!props.rKey) return [];
 
-  // 遍历所有安全属性，找到包含该风险的属性
-  for (const [attrKey, attrValue] of Object.entries(DSRE.secAttrs)) {
-    if (attrValue.risks.includes(props.rKey)) {
-      return attrValue.implements;
-    }
-  }
-  return [];
+  // 直接从风险对象中获取关联的防护手段
+  const risk = DSRE.risks[props.rKey as keyof typeof DSRE.risks];
+  return risk?.securityImplements || [];
 };
 
 const drawer = ref(props.drawer);

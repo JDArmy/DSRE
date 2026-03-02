@@ -100,6 +100,7 @@ let showThreatenDrawer = (threatenKey1: string) => {
 let threatenDetailClose = () => {
   threatenDrawer.value = false;
 };
+
 </script>
 
 <template lang="">
@@ -109,6 +110,9 @@ let threatenDetailClose = () => {
         {{ $t("DSRE.title") }} v{{ DSRE.version }}
       </h3>
       <h6 style="color: gray">{{ $t("DSRE.description") }}</h6>
+      <p style="color: #bbb; font-size: 0.7em; margin-top: -15px; margin-bottom: 15px;">
+        {{ $t("lastUpdated") }}: {{ DSRE.updated }}
+      </p>
 
       <!-- 统计信息 -->
       <div class="stats-container">
@@ -220,13 +224,17 @@ let threatenDetailClose = () => {
               : null
           }}
           <div>
-            <el-tag
-              type="info"
+            <el-tooltip
               v-for="(subcycle, subcycleKey) in DSRE.lifeCycle[scope.row]
                 .subcycles"
               :key="subcycleKey"
-              >{{ $t(`DSRE.lifeCycle.${scope.row}.subcycles.${subcycleKey}.title`) }}</el-tag
+              :content="DSRE.lifeCycle[scope.row].subcycles[subcycleKey].definition || ''"
+              placement="top"
             >
+              <el-tag type="info" style="margin: 2px;">
+                {{ $t(`DSRE.lifeCycle.${scope.row}.subcycles.${subcycleKey}.title`) }}
+              </el-tag>
+            </el-tooltip>
           </div>
         </div>
         <ul class="risk-list" v-else>
@@ -285,7 +293,7 @@ let threatenDetailClose = () => {
 }
 
 .header-sec-attrs .el-tooltip__trigger:hover {
-  background-color: lightcyan;
+  background-color: rgb(228, 228, 230);
 }
 
 .header-life-cycle {

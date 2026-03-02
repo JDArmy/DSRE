@@ -1,13 +1,15 @@
 {
   "Collection": {
     "title": "Data Collection",
-    "description": "",
+    "description": "The process of gathering data from various sources",
     "subcycles": {
       "Acquisition": {
-        "title": "Acquisition"
+        "title": "Acquisition",
+        "definition": "Actively obtaining data through various means, including user input, sensor collection, API calls, etc."
       },
       "Importation": {
-        "title": "Importation"
+        "title": "Importation",
+        "definition": "Importing existing data from external systems or files into the current system"
       }
     },
     "risks": [
@@ -31,13 +33,15 @@
   },
   "Transmission": {
     "title": "Data Transmission",
-    "description": "",
+    "description": "The process of transferring data between different systems or nodes",
     "subcycles": {
       "Despatch": {
-        "title": "Despatch"
+        "title": "Despatch",
+        "definition": "Sending data from the local system to remote systems or other nodes"
       },
       "Reception": {
-        "title": "Reception"
+        "title": "Reception",
+        "definition": "Receiving data from remote systems or other nodes to the local system"
       }
     },
     "risks": [
@@ -59,16 +63,19 @@
   },
   "Storage": {
     "title": "Data Storage",
-    "description": "",
+    "description": "Saving data in storage media for subsequent use",
     "subcycles": {
       "Persistence": {
-        "title": "Persistence"
+        "title": "Persistence",
+        "definition": "Writing data from memory to persistent storage media (such as databases, file systems)"
       },
       "Archive": {
-        "title": "Archive"
+        "title": "Archive",
+        "definition": "Moving infrequently used historical data to long-term storage media"
       },
       "Backup": {
-        "title": "Backup"
+        "title": "Backup",
+        "definition": "Creating data copies to prevent data loss or corruption"
       }
     },
     "risks": [
@@ -106,13 +113,15 @@
   },
   "Processing": {
     "title": "Data Processing",
-    "description": "",
+    "description": "The process of processing, analyzing and presenting data",
     "subcycles": {
       "Calculation": {
-        "title": "Calculation"
+        "title": "Calculation",
+        "definition": "Performing operations, analysis, transformation and other processing on data"
       },
       "Display": {
-        "title": "Display"
+        "title": "Display",
+        "definition": "Presenting data to users in visual or other forms"
       }
     },
     "risks": [
@@ -148,16 +157,19 @@
   },
   "Exchange": {
     "title": "Data Exchange",
-    "description": "",
+    "description": "The process of sharing or transferring data with third parties",
     "subcycles": {
       "Sharing": {
-        "title": "Sharing"
+        "title": "Sharing",
+        "definition": "Sharing data usage rights with other organizations or individuals"
       },
       "Delegation": {
-        "title": "Delegation"
+        "title": "Delegation",
+        "definition": "Delegating data processing tasks to third-party service providers"
       },
       "Exportation": {
-        "title": "Exportation"
+        "title": "Exportation",
+        "definition": "Transferring data overseas or cross-border transmission"
       }
     },
     "risks": [
@@ -186,13 +198,15 @@
   },
   "Destruction": {
     "title": "Data Destruction",
-    "description": "",
+    "description": "The process of permanently deleting or destroying data",
     "subcycles": {
       "Deletion": {
-        "title": "Deletion"
+        "title": "Deletion",
+        "definition": "Deleting data from the system so that it cannot be accessed normally"
       },
       "Cancellation": {
-        "title": "Cancellation"
+        "title": "Cancellation",
+        "definition": "Deactivating user accounts and deleting all related personal data"
       }
     },
     "risks": [
