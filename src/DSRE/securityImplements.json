@@ -198,5 +198,45 @@
         "link": "https://baike.baidu.com/item/%E5%AE%B9%E7%81%BE%E5%A4%87%E4%BB%BD?fromModule=lemma_search-box"
       }
     ]
+  },
+  "PrivacyComputing": {
+    "title": "隐私计算",
+    "description": "隐私计算是指在保护数据本身不对外泄露的前提下实现数据分析计算的技术集合，主要包括安全多方计算（MPC）、联邦学习（FL）、可信执行环境（TEE）、同态加密（HE）、差分隐私（DP）等技术。隐私计算使数据在不离开本地的情况下参与联合分析，实现「数据可用不可见」，有效保护数据安全与个人隐私。",
+    "references": [
+      {
+        "title": "隐私计算技术综述",
+        "link": "https://www.infoq.cn/article/privacy-computing-technology"
+      }
+    ]
+  },
+  "ZeroTrustArchitecture": {
+    "title": "零信任架构",
+    "description": "零信任架构（Zero Trust Architecture，ZTA）是一种以「永不信任，始终验证」为核心原则的安全模型。在数据安全领域，零信任要求对每次数据访问请求进行持续验证，包括身份认证、设备健康状态、访问上下文等，并基于最小权限原则动态授权，防止内部威胁和横向移动导致的数据泄露。",
+    "references": [
+      {
+        "title": "NIST SP 800-207 Zero Trust Architecture",
+        "link": "https://csrc.nist.gov/publications/detail/sp/800-207/final"
+      }
+    ]
+  },
+  "AISecurityProtection": {
+    "title": "AI安全防护",
+    "description": "针对AI/ML系统的数据安全防护措施，包括：训练数据质量检测与投毒防御、模型输入输出过滤（防止提示词注入和敏感数据输出）、AI访问控制与权限管理、模型行为监控与异常检测、以及针对大语言模型的护栏（Guardrails）机制，确保AI系统在数据处理过程中的安全合规。",
+    "references": [
+      {
+        "title": "OWASP Top 10 for LLM Applications",
+        "link": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
+      }
+    ]
+  },
+  "DataLineageTracking": {
+    "title": "数据血缘追踪",
+    "description": "数据血缘追踪是指对数据从产生、流转、加工到消费全过程进行记录和可视化的技术手段。通过建立数据血缘关系图谱，可以追踪数据的来源、流向、转换过程及使用情况，支持数据安全审计、合规检查、数据泄露溯源以及影响范围分析，是数据治理和数据安全管理的重要基础能力。",
+    "references": [
+      {
+        "title": "数据血缘技术解析",
+        "link": "https://www.infoq.cn/article/data-lineage-technology"
+      }
+    ]
   }
 }

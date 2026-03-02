@@ -1,6 +1,7 @@
 {
   "name": "JDARMY DSRE",
-  "version": "0.1.4",
+  "version": "0.2.0",
+  "updated": "2026-03-02",
   "title": "数据安全风险枚举",
   "keyword": "Data Security Risk Enumeration",
   "description": "DSRE（Data Security Risk Enumeration）一个开放知识框架",

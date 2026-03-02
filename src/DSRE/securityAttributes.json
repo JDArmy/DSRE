@@ -7,7 +7,9 @@
       "DataDesensitization",
       "DataClassification",
       "DataPartition",
-      "AccessControl"
+      "AccessControl",
+      "PrivacyComputing",
+      "AISecurityProtection"
     ],
     "risks": [
       "R0001",
@@ -34,11 +36,29 @@
       "R0059",
       "R0061",
       "R0062",
+      "R0064",
       "R0076",
       "R0077",
       "R0078",
       "R0079",
-      "R0090"
+      "R0082",
+      "R0084",
+      "R0090",
+      "R0097",
+      "R0098",
+      "R0099",
+      "R0100",
+      "R0102",
+      "R0103",
+      "R0104",
+      "R0105",
+      "R0106",
+      "R0107",
+      "R0108",
+      "R0109",
+      "R0110",
+      "R0111",
+      "R0112"
     ]
   },
   "Integrity": {
@@ -59,9 +79,12 @@
       "R0036",
       "R0037",
       "R0060",
+      "R0065",
+      "R0072",
       "R0080",
       "R0081",
-      "R0091"
+      "R0091",
+      "R0096"
     ]
   },
   "Availability": {
@@ -89,7 +112,7 @@
   },
   "Authentication": {
     "title": "认证",
-    "threaten": "Snoofing",
+    "threaten": "Spoofing",
     "implements": [
       "PasswordAuthentication",
       "MultipleFactorAuthentication",
@@ -110,6 +133,7 @@
       "R0067",
       "R0069",
       "R0070",
+      "R0071",
       "R0085",
       "R0086",
       "R0093"
@@ -120,7 +144,8 @@
     "threaten": "ElevationOfPrivilege",
     "implements": [
       "PermissionMinimization",
-      "AuthorityManagement"
+      "AuthorityManagement",
+      "ZeroTrustArchitecture"
     ],
     "risks": [
       "R0012",
@@ -132,7 +157,8 @@
       "R0073",
       "R0087",
       "R0088",
-      "R0094"
+      "R0094",
+      "R0101"
     ]
   },
   "Auditability": {
@@ -141,7 +167,8 @@
     "implements": [
       "SecurityAudit",
       "SecurityMonitoring",
-      "SecurityManagement"
+      "SecurityManagement",
+      "DataLineageTracking"
     ],
     "risks": [
       "R0013",
