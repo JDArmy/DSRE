@@ -1,5 +1,11 @@
 @import "./base.css";
 
+/* 全局背景优化 - 使用更柔和的灰蓝色调 */
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8eef3 100%);
+  min-height: 100vh;
+}
+
 .relational-link {
   margin: 5px 0;
 }
@@ -10,29 +16,71 @@
 
 .el-tag {
   padding: 3px;
+  transition: all 0.3s ease;
 }
 
+.el-tag:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 风险类别颜色 */
 .Compliance {
   color: var(--el-color-danger);
   border-color: var(--el-color-danger);
+  background: rgba(245, 108, 108, 0.1);
 }
+
 .Vulnerability {
   color: var(--el-color-danger-dark-2);
   border-color: var(--el-color-danger-dark-2);
+  background: rgba(198, 40, 40, 0.1);
 }
+
 .Norms {
   color: var(--el-color-primary);
   border-color: var(--el-color-primary);
+  background: rgba(64, 158, 255, 0.1);
 }
+
 .Functional {
   color: var(--el-color-primary-dark-2);
   border-color: var(--el-color-primary-dark-2);
+  background: rgba(0, 84, 179, 0.1);
 }
+
 .Weakness {
   color: var(--el-color-warning);
   border-color: var(--el-color-warning);
+  background: rgba(230, 162, 60, 0.1);
 }
+
 .Confrontational {
   color: var(--el-color-warning-dark-2);
   border-color: var(--el-color-warning-dark-2);
+  background: rgba(179, 87, 0, 0.1);
+}
+
+.AIRisk {
+  color: #5a6c7d;
+  border-color: #5a6c7d;
+  background: rgba(90, 108, 125, 0.1);
+  font-weight: 600;
+}
+
+/* 表格优化 - 使用灰蓝色调 */
+.el-table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.el-table th {
+  background: linear-gradient(135deg, #5a6c7d 0%, #3d4f5d 100%) !important;
+  color: white !important;
+  font-weight: 600;
+}
+
+.el-table tr:hover {
+  background-color: #f5f7fa;
 }

@@ -29,7 +29,7 @@ import iconGithub from "@/components/icons/iconGithub.vue";
 
       <el-footer>
         <div class="footer">
-          ©2022 JD.Army
+          ©2022-2026 JD.Army | DSRE v0.2.0
           <span class="github">
             <a href="https://github.com/JDArmy/DSRE" target="_blank">
               <icon-github />

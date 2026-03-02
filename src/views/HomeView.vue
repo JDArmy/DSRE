@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import DSRE from "@/DSRE";
-import { ref, watch } from "vue";
+import { ref, watch, computed } from "vue";
 
 import RiskDetail from "@/components/RiskDetail.vue";
 import ImplementDetail from "@/components/ImplementDetail.vue";
@@ -10,6 +10,12 @@ import { useRouter, useRoute } from "vue-router";
 const secAttrs = ["header"].concat(Object.keys(DSRE.secAttrs));
 const lifeCycle = Object.keys(DSRE.lifeCycle);
 const getWindowHeight = () => window.innerHeight;
+
+// 统计数据
+const totalRisks = computed(() => Object.keys(DSRE.risks).length);
+const totalCategories = computed(() => Object.keys(DSRE.riskCtg).length);
+const totalImplements = computed(() => Object.keys(DSRE.secImpls).length);
+const totalLifeCycles = computed(() => Object.keys(DSRE.lifeCycle).length);
 
 //分场景查看风险
 let ctgRiskKeys = ref(Object.keys(DSRE.risks));
@@ -103,6 +109,26 @@ let threatenDetailClose = () => {
         {{ $t("DSRE.title") }} v{{ DSRE.version }}
       </h3>
       <h6 style="color: gray">{{ $t("DSRE.description") }}</h6>
+
+      <!-- 统计信息 -->
+      <div class="stats-container">
+        <div class="stat-card">
+          <div class="stat-number">{{ totalRisks }}</div>
+          <div class="stat-label">风险条目</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">{{ totalCategories }}</div>
+          <div class="stat-label">风险类别</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">{{ totalLifeCycles }}</div>
+          <div class="stat-label">生命周期</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">{{ totalImplements }}</div>
+          <div class="stat-label">防护手段</div>
+        </div>
+      </div>
     </el-col>
 
     <el-col>
@@ -271,6 +297,44 @@ let threatenDetailClose = () => {
   margin-bottom: 10px;
 }
 
+/* 统计卡片样式 */
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #5a6c7d 0%, #3d4f5d 100%);
+  border-radius: 12px;
+  padding: 20px 30px;
+  box-shadow: 0 4px 12px rgba(90, 108, 125, 0.3);
+  transition: all 0.3s ease;
+  min-width: 120px;
+  text-align: center;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(90, 108, 125, 0.4);
+}
+
+.stat-number {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: white;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
 .implements-pane {
   font-size: 80%;
   text-align: left;
@@ -351,5 +415,25 @@ let threatenDetailClose = () => {
 .category {
   transform: scale(0.75);
   margin-left: -5px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .stats-container {
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 15px 20px;
+    min-width: 100px;
+  }
+
+  .stat-number {
+    font-size: 2em;
+  }
+
+  .stat-label {
+    font-size: 0.8em;
+  }
 }
 </style>
